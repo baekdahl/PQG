@@ -15,14 +15,14 @@ namespace PQG
     public partial class PQG : Form
     {
         private Player _player;
-        private Monster _currentMonster;
+        //private Monster _currentMonster;
 
         public PQG()
         {
             InitializeComponent();
 
-            _player = new Player(0, 0, 0, 0, 1);
-
+            //_player = new Player(0, 0, 0, 0, 1);
+            _player.Quests.Add(new PlayerQuest());
         }
 
         /// <summary>
@@ -47,6 +47,8 @@ namespace PQG
                 }
             }
         }
+
+
 
         /// <summary>
         /// Used to Keep the Quest log Updated with quest names, and to see if they are done

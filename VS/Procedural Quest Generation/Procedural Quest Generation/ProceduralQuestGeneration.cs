@@ -122,6 +122,7 @@ namespace Procedural_Quest_Generation
                             rtbMessages.Text += newLocation.QuestAvailableHere.RewardExperiencePoints.ToString() + " experience points" + Environment.NewLine;
                             rtbMessages.Text += newLocation.QuestAvailableHere.RewardGold.ToString() + " gold" + Environment.NewLine;
                             rtbMessages.Text += newLocation.QuestAvailableHere.RewardItem.Name + Environment.NewLine;
+
                             rtbMessages.Text += Environment.NewLine;
 
                             _player.ExperiencePoints += newLocation.QuestAvailableHere.RewardExperiencePoints;
@@ -471,6 +472,11 @@ namespace Procedural_Quest_Generation
         private void rtbMessages_TextChanged(object sender, EventArgs e)
         {
             ScrollToBottomOfMessages();
+        }
+
+        private void dgvInventory_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

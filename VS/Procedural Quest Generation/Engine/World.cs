@@ -31,7 +31,7 @@ namespace Engine
 
         public const int QUEST_ID_CLEAR_ALCHEMIST_GARDEN = 1;
         public const int QUEST_ID_CLEAR_FARMERS_FIELD = 2;
-        public const int QUEST_ID_GO_ADVENTURE = 3;
+        public const int QUEST_ID_KILL_QUEST = 3;
 
         public const int LOCATION_ID_HOME = 1;
         public const int LOCATION_ID_TOWN_SQUARE = 2;
@@ -91,7 +91,7 @@ namespace Engine
                 new Quest(
                     QUEST_ID_CLEAR_ALCHEMIST_GARDEN,
                     "Clear the alchemist's garden",
-                    "Kill rats in the alchemist's garden and bring back 3 rat tails. You will receive a healing potion and 10 gold pieces.", 20, 10);
+                    "Kill rats in the alchemist's garden and bring back 3 rat tails. You will receive a healing potion and 10 gold pieces.", 0, 20, 10);
 
             clearAlchemistGarden.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_RAT_TAIL), 3));
 
@@ -101,34 +101,37 @@ namespace Engine
                 new Quest(
                     QUEST_ID_CLEAR_FARMERS_FIELD,
                     "Clear the farmer's field",
-                    "Kill snakes in the farmer's field and bring back 3 snake fangs. You will receive an adventurer's pass and 20 gold pieces.", 20, 20);
+                    "Kill snakes in the farmer's field and bring back 3 snake fangs. You will receive an adventurer's pass and 20 gold pieces.", 0, 20, 20);
 
             clearFarmersField.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_SNAKE_FANG), 3));
 
             clearFarmersField.RewardItem = ItemByID(ITEM_ID_ADVENTURER_PASS);
 
-            Quest LeaveTheHouse =
+            
+            int tempKills = RandomNumerGen.NumberBetween(2, 10);
+            int tempMob = RandomNumerGen.NumberBetween(0, Monsters.Count);
+            Quest KillQuest =
                 new Quest(
-                    QUEST_ID_GO_ADVENTURE,
-                    "Adventure Time", 
-                    "Leave your house and let the adventure begin.", 5, 0);
+                    QUEST_ID_KILL_QUEST,
+                    "Kill Quest", "Kill " + tempKills + " " + Monsters[tempMob].Name, tempKills, 100, 20);
 
-            LeaveTheHouse.QuestCompletionItems.Add(new QuestCompletionItem(ItemByID(ITEM_ID_RUSTY_SWORD), 1));
-            LeaveTheHouse.RewardItem = ItemByID(ITEM_ID_FINE_SWORD);
+            KillQuest.QuestCompletionKills.Add(new QuestCompletionKill(MonsterByID(tempMob), tempKills));
+            KillQuest.RewardItem = ItemByID(ITEM_ID_HEALING_POTION);
+            
 
+            //Add Quests to list
 
-
-
-            Quests.Add(LeaveTheHouse);
             Quests.Add(clearAlchemistGarden);
             Quests.Add(clearFarmersField);
+            Quests.Add(KillQuest);
+
         }
 
         private static void PopulateLocations()
         {
             // Create each location
             Location home = new Location(LOCATION_ID_HOME, "Home", "Your house. You really need to clean up the place.");
-            home.QuestAvailableHere = QuestByID(QUEST_ID_GO_ADVENTURE);
+            home.QuestAvailableHere = QuestByID(QUEST_ID_KILL_QUEST);
 
             Location townSquare = new Location(LOCATION_ID_TOWN_SQUARE, "Town square", "You see a fountain.");
 
