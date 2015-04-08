@@ -22,16 +22,16 @@ namespace Engine
                 case 1:
                     //goto
                     GoTo GOTO = new GoTo(RandomNumberGenerator.NumberBetween(0, 2));
-                    return "Subquest 1: " + "\n" + GOTO.returnMsg() + "\n";
+                    return "Subquest 1: \n" + GOTO.returnMsg();
                 case 2:
                     //goto
                     //Quest
                     //"goto"
                     GoTo GOTO2 = new GoTo(RandomNumberGenerator.NumberBetween(0, 2));
-                    return "Subquest 2: " + "\n" + GOTO2.returnMsg() + "\n" + "NOT DOOOOONE \n" + "You arrived at that location";
+                    return "Subquest 2: \n" + GOTO2.returnMsg() + "NOT DOOOOONE " + "\n" + "You arrived at that location" + "\n";
 
                 default:
-                    return "Something went wrong, in Subquest";
+                    return "Something went wrong, in Subquest" + "\n";
             }
         }
     }

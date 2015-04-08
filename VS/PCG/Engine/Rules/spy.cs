@@ -26,7 +26,7 @@ namespace Engine
                 //"report"
                 GoTo GOTO = new GoTo(RandomNumberGenerator.NumberBetween(0, 2));
                 GoTo GOTO2 = new GoTo(RandomNumberGenerator.NumberBetween(0, 2));
-                return "Spy 1: " + GOTO.returnMsg() + " you spy on NPC" + GOTO2.returnMsg() + " You returned to LOCATION and reported what you learned." + "\n";
+                return "Spy 1: \n" + GOTO.returnMsg() + "You spy on NPC" + "\n" + GOTO2.returnMsg() + "You returned to LOCATION and reported what you learned." + "\n";
 
             default:
                 return "Something went wrong, in Spy";

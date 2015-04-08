@@ -26,13 +26,13 @@ namespace Engine
             case 2:
                 //steal
                 steal Steal = new steal(RandomNumberGenerator.NumberBetween(0,1));
-                return "Get 2: " + Steal.returnMsg() + "\n";
+                return "Get 2: \n" + Steal.returnMsg();
 
             case 3:
                 //goto
                 //"gather"
                 GoTo GOTO = new GoTo(RandomNumberGenerator.NumberBetween(0, 2));
-                return "Get 3: " + GOTO.returnMsg() + " and gather this ITEM" + "\n";
+                return "Get 3: \n" + GOTO.returnMsg() + "You gather the ITEM" + "\n";
 
             case 4:
                 //goto
@@ -44,7 +44,7 @@ namespace Engine
                 Get get = new Get(RandomNumberGenerator.NumberBetween(0, 3));
                 GoTo GOTO3 = new GoTo(RandomNumberGenerator.NumberBetween(0, 2));
                 Subquest subquest = new Subquest(RandomNumberGenerator.NumberBetween(0, 1));
-                return "Get 4: " + GOTO2.returnMsg() + " " + get.returnMsg() + " " + GOTO3.returnMsg() + "" + subquest.returnMsg() + "you exchange ITEMS?" + " \n";
+                return "Get 4: \n" + GOTO2.returnMsg() + get.returnMsg()  + GOTO3.returnMsg() + subquest.returnMsg() + "You exchange ITEMS?" + " \n";
 
             default:
                 return "Something went wrong, in Get";

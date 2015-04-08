@@ -23,7 +23,7 @@ namespace Engine
                 //goto
                 //"kill"
                 GoTo GOTO = new GoTo(RandomNumberGenerator.NumberBetween(0, 2));
-                return "Kill 1: " + GOTO.returnMsg() + "You killed NPC" + "\n";
+                return "Kill 1: \n" + GOTO.returnMsg() + "You killed NPC \n" + "\n";
 
             default:
                 return "Something went wrong, in Kill";

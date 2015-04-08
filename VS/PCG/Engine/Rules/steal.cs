@@ -25,7 +25,7 @@ namespace Engine
                 //"take"
 
                 GoTo GOTO = new GoTo(RandomNumberGenerator.NumberBetween(0, 2));
-                return "Steal 1: " + GOTO.returnMsg() + " you stealth you to your target and steal an ITEM out of its pocket" + "\n";
+                return "Steal 1: \n" + GOTO.returnMsg() + "You stealth you to your target and steal an ITEM out of its pocket" + "\n";
 
             case 2:
                 //goto
@@ -34,7 +34,7 @@ namespace Engine
 
                 GoTo GOTO2 = new GoTo(RandomNumberGenerator.NumberBetween(0, 2));
                 kill Kill = new kill(0);
-                return "Steal 2: " + GOTO2.returnMsg() + " " + Kill.returnMsg() + "\n";
+                return "Steal 2: \n" + GOTO2.returnMsg() + Kill.returnMsg();
 
             default:
                 return "Something went wrong, in Steal";

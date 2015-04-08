@@ -40,18 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="capture.cs" />
-    <Compile Include="Get.cs" />
-    <Compile Include="GoTo.cs" />
-    <Compile Include="kill.cs" />
-    <Compile Include="Knowledge.cs" />
-    <Compile Include="Learn.cs" />
+    <Compile Include="Motivations\Ability.cs" />
+    <Compile Include="Motivations\Conquest.cs" />
+    <Compile Include="Motivations\Equipment.cs" />
+    <Compile Include="Motivations\Reputation.cs" />
+    <Compile Include="Motivations\Wealth.cs" />
+    <Compile Include="Rules\capture.cs" />
+    <Compile Include="Motivations\Comfort.cs" />
+    <Compile Include="Rules\Get.cs" />
+    <Compile Include="Rules\GoTo.cs" />
+    <Compile Include="Rules\kill.cs" />
+    <Compile Include="Motivations\Knowledge.cs" />
+    <Compile Include="Rules\Learn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomNumberGenerator.cs" />
-    <Compile Include="spy.cs" />
-    <Compile Include="steal.cs" />
-    <Compile Include="Subquest.cs" />
-    <Compile Include="World.cs" />
+    <Compile Include="Rules\spy.cs" />
+    <Compile Include="Rules\steal.cs" />
+    <Compile Include="Rules\Subquest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

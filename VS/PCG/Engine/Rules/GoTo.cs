@@ -31,7 +31,7 @@ namespace Engine
                 //learn
                 //"goto"
                 Learn learn = new Learn(RandomNumberGenerator.NumberBetween(0, 3));
-                return "Goto 3: " + learn.returnMsg() + " You walk to the location" + "\n";
+                return "Goto 3: \n" + learn.returnMsg() + "You walk to the location" + "\n";
 
             default:
                 return "Something went wrong, in goto" + "\n";
