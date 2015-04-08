@@ -14,8 +14,9 @@ namespace Engine
         public Knowledge(int callOfKnowledge)
         {
             CallOfKnowledge = callOfKnowledge;
-            
-            
+
+            PCG._PCG.update("what is up");
+
             switch (CallOfKnowledge + 1)
             {
             case 1:

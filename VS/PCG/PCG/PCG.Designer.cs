@@ -40,6 +40,7 @@
             this.rtb1.Size = new System.Drawing.Size(760, 538);
             this.rtb1.TabIndex = 1;
             this.rtb1.Text = "";
+            this.rtb1.TextChanged += new System.EventHandler(this.rtb1_TextChanged);
             // 
             // button1
             // 
