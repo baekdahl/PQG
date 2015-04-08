@@ -20,13 +20,15 @@ namespace Engine
             switch (CallofSubQuest + 1)
             {
                 case 1:
-                    //GoTo GOTO = new GoTo(RandomNumberGenerator.NumberBetween(0, 2));
-                    return "\n Random AS BALLS!!!!!!!!!";
+                    //goto
+                    GoTo GOTO = new GoTo(RandomNumberGenerator.NumberBetween(0, 2));
+                    return "Subquest 1: " + "\n" + GOTO.returnMsg() + "\n";
                 case 2:
                     //goto
-                    //quest
-                    //goto
-                    return "Needs more iNFO";
+                    //Quest
+                    //"goto"
+                    GoTo GOTO2 = new GoTo(RandomNumberGenerator.NumberBetween(0, 2));
+                    return "Subquest 2: " + "\n" + GOTO2.returnMsg() + "\n" + "NOT DOOOOONE \n" + "You arrived at that location";
 
                 default:
                     return "Something went wrong, in Subquest";

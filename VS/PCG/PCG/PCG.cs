@@ -21,9 +21,8 @@ namespace PCG
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            rtb1.Text += "\n" + "\n";
             Knowledge Quest1 = new Knowledge(RandomNumberGenerator.NumberBetween(0, 4));
-            rtb1.Text += Quest1.returnMsg();
+            rtb1.Text += Quest1.returnMsg() + "\n";
         }
 
         /// <summary>

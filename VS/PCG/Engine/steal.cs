@@ -6,7 +6,39 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    class steal
+    public class steal
     {
+        private int CallOfSteal { get; set; }
+
+        public steal(int callOfSteal)
+        {
+            CallOfSteal = callOfSteal;
+        }
+
+        public string returnMsg()
+        {
+            switch (CallOfSteal + 1)
+            {
+            case 1:
+                //goto
+                //"stealth"
+                //"take"
+
+                GoTo GOTO = new GoTo(RandomNumberGenerator.NumberBetween(0, 2));
+                return "Steal 1: " + GOTO.returnMsg() + " you stealth you to your target and steal an ITEM out of its pocket" + "\n";
+
+            case 2:
+                //goto
+                //kill
+                //"take"
+
+                GoTo GOTO2 = new GoTo(RandomNumberGenerator.NumberBetween(0, 2));
+                kill Kill = new kill(0);
+                return "Steal 2: " + GOTO2.returnMsg() + " " + Kill.returnMsg() + "\n";
+
+            default:
+                return "Something went wrong, in Steal";
+            }
+        }
     }
 }

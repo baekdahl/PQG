@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="capture.cs" />
-    <Compile Include="get.cs" />
+    <Compile Include="Get.cs" />
     <Compile Include="GoTo.cs" />
     <Compile Include="kill.cs" />
     <Compile Include="Knowledge.cs" />

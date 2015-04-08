@@ -13,19 +13,45 @@ namespace Engine
         public Learn(int callOfLearn)
         {
             CallOfLearn = callOfLearn;
+        }
 
+        public string returnMsg()
+        {
             switch (CallOfLearn + 1)
             {
             case 1:
-                Console.WriteLine("You Already Know This");
-                break;
+                //Already know it
+                return "Learn 1: You Already Know This \n";
 
             case 2:
-                break;
+                //goto
+                //subquest
+                //"listen"
+                GoTo GOTO = new GoTo(RandomNumberGenerator.NumberBetween(0, 2));
+                Subquest subquest = new Subquest(RandomNumberGenerator.NumberBetween(0, 1));
+
+                return "Learn 2: " + GOTO.returnMsg() + subquest.returnMsg() + "you listen to NPC" + "\n";
+
+            case 3:
+                //goto
+                //get
+                //"read"
+                GoTo GOTO2 = new GoTo(RandomNumberGenerator.NumberBetween(0, 2));
+                Get get = new Get(RandomNumberGenerator.NumberBetween(0, 3));
+                return "Learn 3: " + GOTO2.returnMsg() + " " + get.returnMsg() + " Read what is written \n";
+ 
+            case 4:
+                //get
+                //subquest
+                //"give"
+                //"Listen"
+                Get get2 = new Get(RandomNumberGenerator.NumberBetween(0, 3));
+                Subquest subquest2 = new Subquest(RandomNumberGenerator.NumberBetween(0, 1));
+
+                return "Learn 4: " + get2.returnMsg() + subquest2.returnMsg() + "the NPC gave you this INFO" + "\n";
 
             default:
-                Console.WriteLine("Something went wrong, in Learn");
-                break;
+                return "Something went wrong, in Learn";
             }
         }
     }

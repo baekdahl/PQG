@@ -13,25 +13,28 @@ namespace Engine
         public GoTo(int callOfGoto)
         {
             CallofGoto = callOfGoto;
+        }
 
+        public string returnMsg()
+        {
             switch (CallofGoto + 1)
             {
             case 1:
-                Console.WriteLine("You are already at this LOCATION");
-                break;
-            
+                //Already there
+                return "Goto 1: You are already at this LOCATION" + "\n";
+
             case 2:
-                Console.WriteLine("You wander around the world, exploring until you stumble upon your LOCATION");
-                break;
-            
+                //Explore area
+                return "Goto 2: You wander around the world, exploring until you stumble upon your LOCATION" + "\n";
+
             case 3:
                 //learn
-                //go there (goto)
-                break;
+                //"goto"
+                Learn learn = new Learn(RandomNumberGenerator.NumberBetween(0, 3));
+                return "Goto 3: " + learn.returnMsg() + " You walk to the location" + "\n";
 
             default:
-                Console.WriteLine("Something went wrong, in goto");
-                break;
+                return "Something went wrong, in goto" + "\n";
             }
         }
     }
