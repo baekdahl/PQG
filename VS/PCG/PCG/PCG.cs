@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Engine;
+
 namespace PCG
 {
     public partial class PCG : Form
@@ -15,6 +17,12 @@ namespace PCG
         public PCG()
         {
             InitializeComponent();
+        }
+
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Knowledge Quest1 = new Knowledge(RandomNumberGenerator.NumberBetween(0, 4));
         }
     }
 }
