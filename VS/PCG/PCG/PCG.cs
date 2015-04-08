@@ -17,26 +17,13 @@ namespace PCG
         public PCG()
         {
             InitializeComponent();
-            _PCG = this;
-        }
-
-        public static PCG _PCG;
-
-        public void update(string message)
-        {
-            rtb1.AppendText(message);
-            MessageBox.Show(message);
-        }
-
-        private void PCG_Load(object sender, EventArgs e)
-        {
-            Knowledge Quest1 = new Knowledge(RandomNumberGenerator.NumberBetween(0, 4));
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            rtb1.Text += "\n" + "\n";
             Knowledge Quest1 = new Knowledge(RandomNumberGenerator.NumberBetween(0, 4));
-
+            rtb1.Text += Quest1.returnMsg();
         }
 
         /// <summary>

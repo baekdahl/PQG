@@ -8,37 +8,33 @@ namespace Engine
 {
     public class Knowledge
     {
-
         private int CallOfKnowledge { get; set; }
+
 
         public Knowledge(int callOfKnowledge)
         {
             CallOfKnowledge = callOfKnowledge;
+        }
 
-            PCG._PCG.update("what is up");
-
+        public string returnMsg()
+        {
             switch (CallOfKnowledge + 1)
             {
-            case 1:
-                Console.WriteLine("Deliever");
-                Subquest subquest = new Subquest(0);
-                break;
-            
-            case 2:
-                Console.WriteLine("Spy");
-                break;
-            
-            case 3:
-                Console.WriteLine("Interview");
-                break;
-            
-            case 4:
-                Console.WriteLine("Use Item In Field");
-                break;
-            
-            default:
-                Console.WriteLine("Something went wrong, in Knowledge");
-                break;
+                case 1:
+                    Subquest subquest = new Subquest(0);
+                    return "Deliever" + subquest.returnMsg();
+                  
+                case 2:
+                    return "Spy";
+
+                case 3:
+                    return "Interview";
+
+                case 4:
+                    return "Use Item In Field";
+
+                default:
+                    return "Something went wrong, in Knowledge";
             }
         }
 

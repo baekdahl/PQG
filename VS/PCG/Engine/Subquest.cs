@@ -13,21 +13,23 @@ namespace Engine
         public Subquest(int callofSubQuest)
         {
             CallofSubQuest = callofSubQuest;
+        }
 
+        public string returnMsg()
+        {
             switch (CallofSubQuest + 1)
             {
-            case 1:
-                GoTo GOTO = new GoTo(RandomNumberGenerator.NumberBetween(0, 2));
-                break;
-            case 2:
-                //goto
-                //quest
-                //goto
-                break;
+                case 1:
+                    //GoTo GOTO = new GoTo(RandomNumberGenerator.NumberBetween(0, 2));
+                    return "\n Random AS BALLS!!!!!!!!!";
+                case 2:
+                    //goto
+                    //quest
+                    //goto
+                    return "Needs more iNFO";
 
-            default:
-                Console.WriteLine("Something went wrong, in Subquest");
-                break;
+                default:
+                    return "Something went wrong, in Subquest";
             }
         }
     }
