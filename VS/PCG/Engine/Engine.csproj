@@ -45,8 +45,7 @@
     <Compile Include="Motivations\Equipment.cs" />
     <Compile Include="Motivations\Reputation.cs" />
     <Compile Include="Motivations\Wealth.cs" />
-    <Compile Include="Protection.cs" />
-    <Compile Include="Quests.cs" />
+    <Compile Include="Motivations\Protection.cs" />
     <Compile Include="Rules\capture.cs" />
     <Compile Include="Motivations\Comfort.cs" />
     <Compile Include="Rules\Get.cs" />
@@ -59,10 +58,7 @@
     <Compile Include="Rules\spy.cs" />
     <Compile Include="Rules\steal.cs" />
     <Compile Include="Rules\Subquest.cs" />
-    <Compile Include="Serenity.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
+    <Compile Include="Motivations\Serenity.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

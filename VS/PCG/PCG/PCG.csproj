@@ -44,6 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Motivations\Ability.cs" />
+    <Compile Include="Motivations\Comfort.cs" />
+    <Compile Include="Motivations\Conquest.cs" />
+    <Compile Include="Motivations\Equipment.cs" />
+    <Compile Include="Motivations\Knowledge.cs" />
+    <Compile Include="Motivations\Protection.cs" />
+    <Compile Include="Motivations\Reputation.cs" />
+    <Compile Include="Motivations\Serenity.cs" />
+    <Compile Include="Motivations\Wealth.cs" />
     <Compile Include="PCG.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -52,6 +61,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\capturePCG.cs" />
+    <Compile Include="Rules\getPCG.cs" />
+    <Compile Include="Rules\gotoPCG.cs" />
+    <Compile Include="Rules\killPCG.cs" />
+    <Compile Include="Rules\learnPCG.cs" />
+    <Compile Include="Rules\RandomNumberGenerator.cs" />
+    <Compile Include="Rules\spyPCG.cs" />
+    <Compile Include="Rules\stealPCG.cs" />
+    <Compile Include="Rules\subQuestPCG.cs" />
     <EmbeddedResource Include="PCG.resx">
       <DependentUpon>PCG.cs</DependentUpon>
     </EmbeddedResource>
@@ -76,12 +94,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Engine\Engine.csproj">
-      <Project>{fdfccb98-f7ee-49d7-886c-f4cbedf52732}</Project>
-      <Name>Engine</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

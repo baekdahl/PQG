@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Engine
+namespace PCG
 {
-    public class Subquest
+    public class subQuestPCG
     {
         private int CallofSubQuest { get; set; }
-        
-        public Subquest(int callofSubQuest)
+
+        public subQuestPCG(int callofSubQuest)
         {
             CallofSubQuest = callofSubQuest;
         }
@@ -21,16 +21,16 @@ namespace Engine
             {
                 case 1:
                     //goto
-                    GoTo GOTO = new GoTo(RandomNumberGenerator.NumberBetween(0, 2));
+                    gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
                     return "Subquest 1: \n" + GOTO.returnMsg();
                 case 2:
                     //goto
                     //Quest
                     //"goto"
 
-                   
-                    GoTo GOTO2 = new GoTo(RandomNumberGenerator.NumberBetween(0, 2));
-                    return "Subquest 2: \n" + GOTO2.returnMsg() + "NOT DOOOOONE" + "\n" + "You arrived at that location" + "\n";
+                    gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
+                    PCG pcg = new PCG();
+                    return "Subquest 2: \n" + GOTO2.returnMsg() + "INSERT QUEST" + "\n" + "You arrived at that location" + "\n";
                     
                 default:
                     return "Something went wrong, in Subquest" + "\n";
