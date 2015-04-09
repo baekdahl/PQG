@@ -44,7 +44,7 @@ namespace PCG
                     return "Ability 7: (Research a skill(2)) \n" + get3.returnMsg() + "Experiment with the skill \n" + "\n";
 
                 default:
-                    return "Something went wrong, in Knowledge";
+                    return "Something went wrong, in Ability";
             }
         }
     }

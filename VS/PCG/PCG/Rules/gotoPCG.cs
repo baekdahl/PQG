@@ -17,7 +17,7 @@ namespace PCG
 
         public string returnMsg()
         {
-            switch (CallofGoto + 1)
+            switch (CallofGoto + 2)
             {
             case 1:
                 //Already there
