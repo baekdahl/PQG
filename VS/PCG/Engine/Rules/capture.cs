@@ -25,7 +25,7 @@ namespace Engine
                 //"capture"
                 Get get = new Get(RandomNumberGenerator.NumberBetween(0, 3));
                 GoTo GOTO = new GoTo(RandomNumberGenerator.NumberBetween(0, 2));
-                return "Capture 1: \n" + get.returnMsg() + GOTO.returnMsg() + "You capture NPC" + "\n";
+                return "Capture 1: \n" + get.returnMsg() + GOTO.returnMsg() + "You capture NPC\n" + "\n";
 
             default:
                 return "Something went wrong, in Capture";

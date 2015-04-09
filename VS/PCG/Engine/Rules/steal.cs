@@ -34,7 +34,7 @@ namespace Engine
 
                 GoTo GOTO2 = new GoTo(RandomNumberGenerator.NumberBetween(0, 2));
                 kill Kill = new kill(0);
-                return "Steal 2: \n" + GOTO2.returnMsg() + Kill.returnMsg();
+                return "Steal 2: \n" + GOTO2.returnMsg() + Kill.returnMsg() + "You pick up ITEM from the dead NPCs corpse \n" + "\n";
 
             default:
                 return "Something went wrong, in Steal";

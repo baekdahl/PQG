@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using PCG;
+
 namespace Engine
 {
     public class Subquest
@@ -28,8 +30,8 @@ namespace Engine
                     //Quest
                     //"goto"
                     GoTo GOTO2 = new GoTo(RandomNumberGenerator.NumberBetween(0, 2));
-                    return "Subquest 2: \n" + GOTO2.returnMsg() + "NOT DOOOOONE " + "\n" + "You arrived at that location" + "\n";
-
+                    return "Subquest 2: \n" + GOTO2.returnMsg() + "NOT DOOOOONE" + "\n" + "You arrived at that location" + "\n";
+                    
                 default:
                     return "Something went wrong, in Subquest" + "\n";
             }
