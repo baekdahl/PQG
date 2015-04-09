@@ -13,8 +13,6 @@ namespace PCG
         public gotoPCG(int callOfGoto)
         {
             CallofGoto = callOfGoto;
-            PCG pcg = new PCG();
-            pcg.Quests(2);
         }
 
         public string returnMsg()
