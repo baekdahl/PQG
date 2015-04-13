@@ -23,7 +23,7 @@ namespace PCG
                 //goto
                 //"kill"
                 gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
-                return "Kill 1: \n" + GOTO.returnMsg() + "You killed NPC \n" + "\n";
+                return "Kill 1: \n" + GOTO.returnMsg() + "You killed " + World.NPCbyID(RandomNumberGenerator.NumberBetween(1, World.NPCs.Count + 1)).NPCName + "\n";
 
             default:
                 return "Something went wrong, in Kill";

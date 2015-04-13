@@ -21,17 +21,18 @@ namespace PCG
             {
             case 1:
                 //Already there
-                return "Goto 1: You are already at this LOCATION" + "\n";
+                //World.LocationByID(RandomNumberGenerator.NumberBetween(0, 4)).LocationName
+                return "Goto 1: You are already at " + World.LocationByID(RandomNumberGenerator.NumberBetween(1, World.Locations.Count + 1)).LocationName + "\n";
 
             case 2:
                 //Explore area
-                return "Goto 2: You wander around the world, exploring until you stumble upon your LOCATION" + "\n";
-
+                return "Goto 2: You wander around the world, exploring until you stumble upon " + World.LocationByID(RandomNumberGenerator.NumberBetween(1, World.Locations.Count + 1)).LocationName + "\n";
+                
             case 3:
                 //learn
                 //"goto"
                 learnPCG learn = new learnPCG(RandomNumberGenerator.NumberBetween(0, 3));
-                return "Goto 3: \n" + learn.returnMsg() + "You walk to the location" + "\n";
+                return "Goto 3: \n" + learn.returnMsg() + "You walk to " + World.LocationByID(RandomNumberGenerator.NumberBetween(1, World.Locations.Count + 1)).LocationName + "\n";
 
             default:
                 return "Something went wrong, in goto" + "\n";

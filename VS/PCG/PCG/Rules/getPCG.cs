@@ -21,7 +21,7 @@ namespace PCG
             {
             case 1:
                 //Already have it
-                return "Get 1: You Already have this Item \n";
+                return "Get 1: You already have this " + World.ItemByID(RandomNumberGenerator.NumberBetween(1, World.Items.Count + 1)).ItemName + "\n";
 
             case 2:
                 //steal
@@ -32,7 +32,7 @@ namespace PCG
                 //goto
                 //"gather"
                 gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
-                return "Get 3: \n" + GOTO.returnMsg() + "You gather the ITEM" + "\n";
+                return "Get 3: \n" + GOTO.returnMsg() + "You gathered " + World.ItemByID(RandomNumberGenerator.NumberBetween(1, World.Items.Count + 1)).ItemName + "\n";
 
             case 4:
                 //goto

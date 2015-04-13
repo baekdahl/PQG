@@ -21,7 +21,7 @@ namespace PCG
             {
             case 1:
                 //Already know it
-                return "Learn 1: You Already Know This \n";
+                return "Learn 1: You already know this \n";
 
             case 2:
                 //goto
@@ -30,7 +30,7 @@ namespace PCG
                 gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
                 subQuestPCG subquest = new subQuestPCG(RandomNumberGenerator.NumberBetween(0, 1));
 
-                return "Learn 2: \n" + GOTO.returnMsg() + subquest.returnMsg() + "You listen to NPC" + "\n";
+                return "Learn 2: \n" + GOTO.returnMsg() + subquest.returnMsg() + "You listen to " + World.NPCbyID(RandomNumberGenerator.NumberBetween(1, World.NPCs.Count + 1)).NPCName + "\n";
 
             case 3:
                 //goto
@@ -48,7 +48,7 @@ namespace PCG
                 getPCG get2 = new getPCG(RandomNumberGenerator.NumberBetween(0, 3));
                 subQuestPCG subquest2 = new subQuestPCG(RandomNumberGenerator.NumberBetween(0, 1));
 
-                return "Learn 4: \n" + get2.returnMsg() + subquest2.returnMsg() + "the NPC gave you this INFO" + "\n";
+                return "Learn 4: \n" + get2.returnMsg() + subquest2.returnMsg() + "the " + World.NPCbyID(RandomNumberGenerator.NumberBetween(1, World.NPCs.Count + 1)).NPCName + " gave you the info" + "\n";
 
             default:
                 return "Something went wrong, in Learn" + "\n";

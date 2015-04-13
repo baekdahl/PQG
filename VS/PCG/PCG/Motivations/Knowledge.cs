@@ -30,14 +30,15 @@ namespace PCG
                 case 3:
                     gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
                     gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
+                    int tempInt = RandomNumberGenerator.NumberBetween(1, World.NPCs.Count + 1);
 
-                    return "Knowledge 3: (Interview) \n" + GOTO.returnMsg() + "You Listen to what the NPC had to say \n" + GOTO2.returnMsg() + "You reported what NPC told you \n" + "\n";
+                    return "Knowledge 3: (Interview) \n" + GOTO.returnMsg() + "You Listen to what " + World.NPCbyID(tempInt).NPCName + " had to say \n" + GOTO2.returnMsg() + "You reported what " + World.NPCbyID(tempInt).NPCName + " told you \n" + "\n";
 
                 case 4:
                     gotoPCG GOTO3 = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
                     gotoPCG GOTO4 = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
                     getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(0, 3));
-                    return "Knowledge 4: (Use Item In Field) \n" + get.returnMsg() + GOTO3.returnMsg() + "You Used the ITEM" + "\n" + GOTO4.returnMsg() + "GIVE??!??! \n" + "\n";
+                    return "Knowledge 4: (Use Item In Field) \n" + get.returnMsg() + GOTO3.returnMsg() + "Use " + World.ItemByID(RandomNumberGenerator.NumberBetween(1, World.Items.Count + 1)).ItemName + "\n" + GOTO4.returnMsg() + "Report the Results \n" + "\n";
 
                 default:
                     return "Something went wrong, in Knowledge";

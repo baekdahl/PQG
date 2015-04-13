@@ -61,6 +61,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RPG\Item.cs" />
+    <Compile Include="RPG\Location.cs" />
+    <Compile Include="RPG\NPC.cs" />
+    <Compile Include="RPG\World.cs" />
     <Compile Include="Rules\capturePCG.cs" />
     <Compile Include="Rules\getPCG.cs" />
     <Compile Include="Rules\gotoPCG.cs" />

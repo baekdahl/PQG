@@ -22,7 +22,7 @@ namespace PCG
                 case 1:
                     gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
                     gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
-                    return "Protection 1: (Attack threatening entities) " + "\n" + GOTO.returnMsg() + "Damgage Entities \n" + GOTO2.returnMsg() + "Report success \n" + "\n";
+                    return "Protection 1: (Attack threatening entities) " + "\n" + GOTO.returnMsg() + "Damage Entities \n" + GOTO2.returnMsg() + "Report success \n" + "\n";
 
                 case 2:
                     getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(0, 3));

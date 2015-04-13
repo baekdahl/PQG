@@ -94,10 +94,10 @@ namespace PCG
         {
             ScrollToBottomOfMessages();
         }
-    }
 
-    public class Globals
-    {
-        public static PCG _PCG;
+        public void MoveTo(Location newLocation)
+        {
+            Location Currentlocation = newLocation;
+        }
     }
 }

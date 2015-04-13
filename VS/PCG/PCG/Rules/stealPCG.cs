@@ -25,7 +25,7 @@ namespace PCG
                 //"take"
 
                 gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
-                return "Steal 1: \n" + GOTO.returnMsg() + "You stealth you to your target and steal an ITEM out of its pocket" + "\n";
+                return "Steal 1: \n" + GOTO.returnMsg() + "You stealth up close to " + World.NPCbyID(RandomNumberGenerator.NumberBetween(1,World.NPCs.Count + 1)).NPCName +" and pick up " + World.ItemByID(RandomNumberGenerator.NumberBetween(1, World.Items.Count + 1)).ItemName + " out of their pockets" + "\n";
 
             case 2:
                 //goto
@@ -34,7 +34,7 @@ namespace PCG
 
                 gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
                 killPCG Kill = new killPCG(0);
-                return "Steal 2: \n" + GOTO2.returnMsg() + Kill.returnMsg() + "You pick up ITEM from the dead NPCs corpse \n" + "\n";
+                return "Steal 2: \n" + GOTO2.returnMsg() + Kill.returnMsg() + "You pick up " + World.ItemByID(RandomNumberGenerator.NumberBetween(1, World.Items.Count + 1)).ItemName + " from " + World.NPCbyID(RandomNumberGenerator.NumberBetween(1, World.NPCs.Count + 1)).NPCName + " corpse \n" + "\n";
 
             default:
                 return "Something went wrong, in Steal";

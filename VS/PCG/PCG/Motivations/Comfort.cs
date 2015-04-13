@@ -23,12 +23,12 @@ namespace PCG
                     getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(0, 3));
                     gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
 
-                    return "Comfort 1: (Obtain Luxuries) \n" + get.returnMsg() + GOTO.returnMsg() + "Give NPC Luxuries \n" + "\n";
+                    return "Comfort 1: (Obtain Luxuries) \n" + get.returnMsg() + GOTO.returnMsg() + "Give " + World.NPCbyID(RandomNumberGenerator.NumberBetween(1, World.NPCs.Count + 1)).NPCName + " the luxuries \n" + "\n";
 
                 case 2:
                     gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
                     gotoPCG GOTO3 = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
-                    return "Comfort 2: (Kill Pests) \n" + GOTO2.returnMsg() + "kill pests" + "\n" + GOTO3.returnMsg() + "Report success to NPC \n" + "\n";
+                    return "Comfort 2: (Kill Pests) \n" + GOTO2.returnMsg() + "kill pests" + "\n" + GOTO3.returnMsg() + "Report success to " + World.NPCbyID(RandomNumberGenerator.NumberBetween(1, World.NPCs.Count + 1)).NPCName + "\n";
 
                 default:
                     return "Something went wrong, in Comfort";

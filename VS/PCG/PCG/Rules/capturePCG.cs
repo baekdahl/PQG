@@ -25,7 +25,7 @@ namespace PCG
                 //"capture"
                 getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(0, 3));
                 gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
-                return "Capture 1: \n" + get.returnMsg() + GOTO.returnMsg() + "You capture NPC\n" + "\n";
+                return "Capture 1: \n" + get.returnMsg() + GOTO.returnMsg() + "You capture " + World.NPCbyID(RandomNumberGenerator.NumberBetween(1, World.NPCs.Count + 1)).NPCName + "\n";
 
             default:
                 return "Something went wrong, in Capture";
