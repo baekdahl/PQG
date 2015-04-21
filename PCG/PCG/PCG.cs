@@ -212,7 +212,7 @@ namespace PCG
                 break;
 
             default:
-                rtb1.Text += "No Motivation have been selected! \n \n";
+                rtb1.Text += "No motivation have been selected! \n \n";
                 break;
             }
         }
@@ -239,7 +239,8 @@ namespace PCG
 
         private void button2_Click(object sender, EventArgs e)
         {
-            QuestsSelective(comboBox2.SelectedIndex);
+            rtb1.Text = "";
+            QuestsSelective(comboBox2.SelectedIndex + 1);
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)

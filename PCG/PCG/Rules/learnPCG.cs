@@ -30,7 +30,7 @@ namespace PCG
                 gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
                 subQuestPCG subquest = new subQuestPCG(RandomNumberGenerator.NumberBetween(1, 3));
 
-                return "Learn 2: Go someplace, perform subquest, get info from NPC \n" + GOTO.returnMsg() + subquest.returnMsg();
+                return "Learn 2: Go someplace, perform subquest, get info from NPC \n" + GOTO.returnMsg() + "\n" + subquest.returnMsg();
 
             case 3:
                 //goto
@@ -38,7 +38,7 @@ namespace PCG
                 //"read"
                 gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
                 getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(1, 5));
-                return "Learn 3: Go someplace, get something, and read what is written on it \n" + GOTO2.returnMsg() + get.returnMsg();
+                return "Learn 3: Go someplace, get something, and read what is written on it \n" + GOTO2.returnMsg() + "\n" + get.returnMsg();
  
             case 4:
                 //get
@@ -47,7 +47,7 @@ namespace PCG
                 //"Listen"
                 getPCG get2 = new getPCG(RandomNumberGenerator.NumberBetween(1, 5));
                 subQuestPCG subquest2 = new subQuestPCG(RandomNumberGenerator.NumberBetween(1, 3));
-                return "Learn 4: Get something, perform subquest, give to NPC in return for info \n" + get2.returnMsg() + subquest2.returnMsg();
+                return "Learn 4: Get something, perform subquest, give to NPC in return for info \n" + get2.returnMsg() + "\n" + subquest2.returnMsg();
 
             default:
                 return "Something went wrong, in Learn";

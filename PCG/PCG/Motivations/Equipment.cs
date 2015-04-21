@@ -21,7 +21,7 @@ namespace PCG
             switch (CallOfEquipment)
             {
                 case 1:
-                    return "Equipment 1: (Assemble) " + "\n" + "You assemble some gear \n" + "\n";
+                    return "Equipment 1: (Assemble) " + "\n" + "You assemble some gear \n";
 
                 case 2:
                     getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(1, 5));
@@ -34,7 +34,7 @@ namespace PCG
 
                 case 4:
                     gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
-                    return "Equipment 4: (Trade for supplies) \n" + GOTO2.returnMsg() + "\n" + "Meet up with merchants and trade for resources \n" + "\n";
+                    return "Equipment 4: (Trade for supplies) \n" + GOTO2.returnMsg() + "\n" + "Meet up with merchants and trade for resources \n";
 
                 default:
                     return "Something went wrong, in Equipment";

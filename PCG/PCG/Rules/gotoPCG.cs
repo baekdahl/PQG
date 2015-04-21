@@ -21,11 +21,11 @@ namespace PCG
             {
             case 1:
                 //Already there
-                return "Goto 1: You are already there \n";
+                return "Goto 1: You are already there";
 
             case 2:
                 //Explore area
-                return "Goto 2: Just wander around and look \n";
+                return "Goto 2: Just wander around and look";
                 
             case 3:
                 //learn

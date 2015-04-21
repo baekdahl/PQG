@@ -44,7 +44,6 @@
             this.rtb1.Size = new System.Drawing.Size(760, 341);
             this.rtb1.TabIndex = 1;
             this.rtb1.Text = "";
-            this.rtb1.ZoomFactor = 1.5F;
             this.rtb1.TextChanged += new System.EventHandler(this.rtb1_TextChanged);
             // 
             // button1
@@ -59,13 +58,13 @@
             // 
             // rtbQuest
             // 
+            this.rtbQuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbQuest.Location = new System.Drawing.Point(12, 41);
             this.rtbQuest.Name = "rtbQuest";
             this.rtbQuest.ReadOnly = true;
             this.rtbQuest.Size = new System.Drawing.Size(760, 162);
             this.rtbQuest.TabIndex = 3;
             this.rtbQuest.Text = "";
-            this.rtbQuest.ZoomFactor = 1.5F;
             // 
             // button2
             // 

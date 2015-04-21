@@ -34,7 +34,7 @@ namespace PCG
 
                 gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
                 killPCG Kill = new killPCG(1);
-                return "Steal 2: Go someplace, kill somebody and take something \n" + GOTO2.returnMsg() + Kill.returnMsg();
+                return "Steal 2: Go someplace, kill somebody and take something \n" + GOTO2.returnMsg() + "\n" + Kill.returnMsg();
 
             default:
                 return "Something went wrong, in Steal";

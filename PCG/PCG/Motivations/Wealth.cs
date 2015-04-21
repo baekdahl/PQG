@@ -30,7 +30,7 @@ namespace PCG
                     return "Wealth 2: (Steal valuables for resale) \n" + GOTO2.returnMsg() + "\n" + Steal.returnMsg() + "\n";
 
                 case 3:
-                    return "Wealth 3: (Make valuables for resale) \n" + "You craft some valuables \n" + "\n";
+                    return "Wealth 3: (Make valuables for resale) \n" + "You craft some valuables \n";
 
                 default:
                     return "Something went wrong, in Wealth";

@@ -23,7 +23,7 @@ namespace PCG
                     getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(1, 5));
                     gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
 
-                    return "Comfort 1: (Obtain Luxuries) \n" + get.returnMsg() + "\n" + GOTO.returnMsg() + "\n" + "Give " + World.NPCbyID(RandomNumberGenerator.NumberBetween(1, World.NPCs.Count + 1)).NPCName + " the luxuries \n" + "\n";
+                    return "Comfort 1: (Obtain Luxuries) \n" + get.returnMsg() + "\n" + GOTO.returnMsg() + "\n" + "Give " + World.NPCbyID(RandomNumberGenerator.NumberBetween(1, World.NPCs.Count + 1)).NPCName + " the luxuries \n";
 
                 case 2:
                     gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
