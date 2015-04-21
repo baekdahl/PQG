@@ -17,55 +17,55 @@ namespace PCG
 
         public string returnMsg()
         {
-            switch (CallofSubQuest + 1)
+            switch (CallofSubQuest)
             {
                 case 1:
                     //goto
-                    gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
-                    return "Subquest 1: \n" + GOTO.returnMsg();
+                    gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
+                    return "Subquest 1: Subquest could be just to go someplace \n" + GOTO.returnMsg();
                 case 2:
                     //goto
                     //Quest
                     //"goto"
-                    gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
+                    gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
                     
-                          switch (RandomNumberGenerator.NumberBetween(0,9) + 1)
+                          switch (RandomNumberGenerator.NumberBetween(1,10))
                           {
                           case 1:
-                              Knowledge KnowledgeQuest = new Knowledge(RandomNumberGenerator.NumberBetween(0, 4));
-                              return "Subquest 2: \n" + GOTO2.returnMsg() + KnowledgeQuest.returnMsg() + "You arrived at that location" + "\n";
+                              Knowledge KnowledgeQuest = new Knowledge(RandomNumberGenerator.NumberBetween(1, 5));
+                              return "Subquest 2: Go perform a quest and return \n" + GOTO2.returnMsg() + KnowledgeQuest.returnMsg();
 
                           case 2:
-                              Comfort ComfortQuest = new Comfort(RandomNumberGenerator.NumberBetween(0, 2));
-                              return "Subquest 2: \n" + GOTO2.returnMsg() + ComfortQuest.returnMsg() + "You arrived at that location" + "\n";
+                              Comfort ComfortQuest = new Comfort(RandomNumberGenerator.NumberBetween(1, 3));
+                              return "Subquest 2: Go perform a quest and return \n" + GOTO2.returnMsg() + ComfortQuest.returnMsg();
 
                           case 3:
-                              Reputation ReputationQuest = new Reputation(RandomNumberGenerator.NumberBetween(0, 3));
-                              return "Subquest 2: \n" + GOTO2.returnMsg() + ReputationQuest.returnMsg() + "You arrived at that location" + "\n";
+                              Reputation ReputationQuest = new Reputation(RandomNumberGenerator.NumberBetween(1, 4));
+                              return "Subquest 2: Go perform a quest and return \n" + GOTO2.returnMsg() + ReputationQuest.returnMsg();
 
                           case 4:
-                              Conquest ConquestQuest = new Conquest(RandomNumberGenerator.NumberBetween(0, 2));
-                              return "Subquest 2: \n" + GOTO2.returnMsg() + ConquestQuest.returnMsg() + "You arrived at that location" + "\n";
+                              Serenity SerenityQuest = new Serenity(RandomNumberGenerator.NumberBetween(1, 8));
+                              return "Subquest 2: Go perform a quest and return \n" + GOTO2.returnMsg() + SerenityQuest.returnMsg();
 
                           case 5:
-                              Wealth WealthQuest = new Wealth(RandomNumberGenerator.NumberBetween(0, 3));
-                              return "Subquest 2: \n" + GOTO2.returnMsg() + WealthQuest.returnMsg() + "You arrived at that location" + "\n";
+                              Protection ProtectionQuest = new Protection(RandomNumberGenerator.NumberBetween(1, 8));
+                              return "Subquest 2: Go perform a quest and return \n" + GOTO2.returnMsg() + ProtectionQuest.returnMsg();
 
                           case 6:
-                              Equipment EquipmentQuest = new Equipment(RandomNumberGenerator.NumberBetween(0, 4));
-                              return "Subquest 2: \n" + GOTO2.returnMsg() + EquipmentQuest.returnMsg() + "You arrived at that location" + "\n";
+                              Conquest ConquestQuest = new Conquest(RandomNumberGenerator.NumberBetween(1, 3));
+                              return "Subquest 2: Go perform a quest and return \n" + GOTO2.returnMsg() + ConquestQuest.returnMsg();
 
                           case 7:
-                              Ability AbilityQuest = new Ability(RandomNumberGenerator.NumberBetween(0, 7));
-                              return "Subquest 2: \n" + GOTO2.returnMsg() + AbilityQuest.returnMsg() + "You arrived at that location" + "\n";
+                              Wealth WealthQuest = new Wealth(RandomNumberGenerator.NumberBetween(1, 4));
+                              return "Subquest 2: Go perform a quest and return \n" + GOTO2.returnMsg() + WealthQuest.returnMsg();
 
                           case 8:
-                              Serenity SerenityQuest = new Serenity(RandomNumberGenerator.NumberBetween(0, 7));
-                              return "Subquest 2: \n" + GOTO2.returnMsg() + SerenityQuest.returnMsg() + "You arrived at that location" + "\n";
+                              Ability AbilityQuest = new Ability(RandomNumberGenerator.NumberBetween(1, 8));
+                              return "Subquest 2: Go perform a quest and return \n" + GOTO2.returnMsg() + AbilityQuest.returnMsg();
 
                           case 9:
-                              Protection ProtectionQuest = new Protection(RandomNumberGenerator.NumberBetween(0, 7));
-                              return "Subquest 2: \n" + GOTO2.returnMsg() + ProtectionQuest.returnMsg() + "You arrived at that location" + "\n";
+                              Equipment EquipmentQuest = new Equipment(RandomNumberGenerator.NumberBetween(1, 5));
+                              return "Subquest 2: Go perform a quest and return \n" + GOTO2.returnMsg() + EquipmentQuest.returnMsg();
 
                           default:
                               return "SOMETHING HAVE GONE WRONG";

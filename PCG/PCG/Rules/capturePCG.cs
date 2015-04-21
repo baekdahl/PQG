@@ -17,15 +17,15 @@ namespace PCG
 
         public string returnMsg()
         {
-            switch (CallOfCapture + 1)
+            switch (CallOfCapture)
             {
             case 1:
                 //get
                 //goto
                 //"capture"
-                getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(0, 3));
-                gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
-                return "Capture 1: \n" + get.returnMsg() + GOTO.returnMsg() + "You capture " + World.NPCbyID(RandomNumberGenerator.NumberBetween(1, World.NPCs.Count + 1)).NPCName + "\n";
+                getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(1, 4));
+                gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
+                return "Capture 1: Get something, go someplace and use it to capture somebody \n" + get.returnMsg() + GOTO.returnMsg();
 
             default:
                 return "Something went wrong, in Capture";

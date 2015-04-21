@@ -70,7 +70,7 @@
     <Compile Include="Rules\gotoPCG.cs" />
     <Compile Include="Rules\killPCG.cs" />
     <Compile Include="Rules\learnPCG.cs" />
-    <Compile Include="Rules\RandomNumberGenerator.cs" />
+    <Compile Include="RPG\RandomNumberGenerator.cs" />
     <Compile Include="Rules\spyPCG.cs" />
     <Compile Include="Rules\stealPCG.cs" />
     <Compile Include="Rules\subQuestPCG.cs" />

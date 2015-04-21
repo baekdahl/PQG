@@ -17,13 +17,13 @@ namespace PCG
 
         public string returnMsg()
         {
-            switch (CallOfKill + 1)
+            switch (CallOfKill)
             {
             case 1:
                 //goto
                 //"kill"
-                gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
-                return "Kill 1: \n" + GOTO.returnMsg() + "You killed " + World.NPCbyID(RandomNumberGenerator.NumberBetween(1, World.NPCs.Count + 1)).NPCName + "\n";
+                gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
+                return "Kill 1: Go someplace and kill somebody \n" + GOTO.returnMsg();
 
             default:
                 return "Something went wrong, in Kill";

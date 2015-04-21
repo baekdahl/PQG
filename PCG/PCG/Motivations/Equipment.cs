@@ -18,26 +18,26 @@ namespace PCG
 
         public string returnMsg()
         {
-            switch (CallOfEquipment + 1)
+            switch (CallOfEquipment)
             {
                 case 1:
                     return "Equipment 1: (Assemble) " + "\n" + "You assemble some gear \n" + "\n";
 
                 case 2:
-                    getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(0, 4));
-                    gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 3));
-                    return "Equipment 2: (Deliver Supplies) " + "\n" + get.returnMsg() + GOTO.returnMsg() + "Give the materials to " + World.NPCbyID(RandomNumberGenerator.NumberBetween(1, World.NPCs.Count + 1)).NPCName + "\n";
+                    getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(1, 5));
+                    gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
+                    return "Equipment 2: (Deliver Supplies) " + "\n" + get.returnMsg() + "\n" + GOTO.returnMsg() + "\n" + "Give the materials to " + World.NPCbyID(RandomNumberGenerator.NumberBetween(1, World.NPCs.Count + 1)).NPCName + "\n";
 
                 case 3:
-                    stealPCG Steal = new stealPCG(RandomNumberGenerator.NumberBetween(0, 2));
+                    stealPCG Steal = new stealPCG(RandomNumberGenerator.NumberBetween(1, 3));
                     return "Equipment 3: (Steal Supplies) \n" + Steal.returnMsg() + "\n";
 
                 case 4:
-                    gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 3));
-                    return "Equipment 4: (Trade for supplies) \n" + GOTO2.returnMsg() + "Meet up with merchants and trade for resources \n" + "\n";
+                    gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
+                    return "Equipment 4: (Trade for supplies) \n" + GOTO2.returnMsg() + "\n" + "Meet up with merchants and trade for resources \n" + "\n";
 
                 default:
-                    return "Something went wrong, in Knowledge";
+                    return "Something went wrong, in Equipment";
             }
         }
     }

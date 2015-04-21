@@ -17,27 +17,26 @@ namespace PCG
 
         public string returnMsg()
         {
-            switch (CallofReputation + 1)
+            switch (CallofReputation)
             {
                 case 1:
-                    getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(0, 4));
-                    gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 3));
-
-                    return "Reputation 1: (Obtain rare item) \n" + get.returnMsg() + GOTO.returnMsg() + "Give NPC rare ITEM \n" + "\n";
+                    getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(1, 5));
+                    gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
+                    return "Reputation 1: (Obtain rare item) \n" + get.returnMsg() + "\n" + GOTO.returnMsg() + "\n" + "Give NPC rare ITEM \n" + "\n";
 
                 case 2:
-                    gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 3));
-                    killPCG Kill = new killPCG(0);
-                    gotoPCG GOTO3 = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 3));
-                    return "Reputation 2: (Kill enemies) \n" + GOTO2.returnMsg() + Kill.returnMsg() + GOTO3.returnMsg() + "Report success to NPC \n" + "\n";
+                    gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
+                    killPCG Kill = new killPCG(1);
+                    gotoPCG GOTO3 = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
+                    return "Reputation 2: (Kill enemies) \n" + GOTO2.returnMsg() + "\n" + Kill.returnMsg() + "\n" + GOTO3.returnMsg() + "\n" + "Report success to NPC \n" + "\n";
 
                 case 3:
-                    gotoPCG GOTO4 = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 3));
-                    gotoPCG GOTO5 = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 3));
-                    return "Reputation 3: (Visit a Dangerous place) \n" + GOTO4.returnMsg() + GOTO5.returnMsg() + "Report your visit to NPC \n" + "\n";
+                    gotoPCG GOTO4 = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
+                    gotoPCG GOTO5 = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
+                    return "Reputation 3: (Visit a Dangerous place) \n" + GOTO4.returnMsg() + "\n" + GOTO5.returnMsg() + "\n" + "Report your visit to NPC \n" + "\n";
 
                 default:
-                    return "Something went wrong, in Comfort";
+                    return "Something went wrong, in Reputation";
             }
         }
     }

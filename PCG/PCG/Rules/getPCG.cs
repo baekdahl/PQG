@@ -17,22 +17,22 @@ namespace PCG
 
         public string returnMsg()
         {
-            switch (CallOfGet + 1)
+            switch (CallOfGet)
             {
             case 1:
                 //Already have it
-                return "Get 1: You already have this " + World.ItemByID(RandomNumberGenerator.NumberBetween(1, World.Items.Count + 1)).ItemName + "\n";
+                return "Get 1: You already have it";
 
             case 2:
                 //steal
-                stealPCG Steal = new stealPCG(RandomNumberGenerator.NumberBetween(0, 1));
-                return "Get 2: Steal the item from someone \n" + Steal.returnMsg();
+                stealPCG Steal = new stealPCG(RandomNumberGenerator.NumberBetween(1, 3));
+                return "Get 2: Steal it from somebody \n" + Steal.returnMsg();
 
             case 3:
                 //goto
                 //"gather"
-                gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
-                return "Get 3: Go someplace and pick something up \n" + GOTO.returnMsg() + "You gathered " + World.ItemByID(RandomNumberGenerator.NumberBetween(1, World.Items.Count + 1)).ItemName + "\n";
+                gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
+                return "Get 3: Go someplace and pick something up that’s lying around there. \n" + GOTO.returnMsg();
 
             case 4:
                 //goto
@@ -40,11 +40,11 @@ namespace PCG
                 //goto
                 //subquest
                 //"exchange"
-                gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
-                getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(0, 3));
-                gotoPCG GOTO3 = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
-                subQuestPCG subquest = new subQuestPCG(RandomNumberGenerator.NumberBetween(0, 1));
-                return "Get 4: Go someplace, get something, do a subquest\n" + GOTO2.returnMsg() + get.returnMsg()  + GOTO3.returnMsg() + subquest.returnMsg() + "You exchange ITEMS?" + " \n";
+                gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
+                getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(1, 5));
+                gotoPCG GOTO3 = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
+                subQuestPCG subquest = new subQuestPCG(RandomNumberGenerator.NumberBetween(1, 3));
+                return "Get 4: Go someplace, get something, do a subquest for somebody return and exchange. \n" + GOTO2.returnMsg() + get.returnMsg()  + GOTO3.returnMsg() + subquest.returnMsg();
 
             default:
                 return "Something went wrong, in Get";
