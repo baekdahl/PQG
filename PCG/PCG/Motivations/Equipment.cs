@@ -24,16 +24,16 @@ namespace PCG
                     return "Equipment 1: (Assemble) " + "\n" + "You assemble some gear \n" + "\n";
 
                 case 2:
-                    getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(0, 3));
-                    gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
+                    getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(0, 4));
+                    gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 3));
                     return "Equipment 2: (Deliver Supplies) " + "\n" + get.returnMsg() + GOTO.returnMsg() + "Give the materials to " + World.NPCbyID(RandomNumberGenerator.NumberBetween(1, World.NPCs.Count + 1)).NPCName + "\n";
 
                 case 3:
-                    stealPCG Steal = new stealPCG(RandomNumberGenerator.NumberBetween(0, 1));
+                    stealPCG Steal = new stealPCG(RandomNumberGenerator.NumberBetween(0, 2));
                     return "Equipment 3: (Steal Supplies) \n" + Steal.returnMsg() + "\n";
 
                 case 4:
-                    gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
+                    gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 3));
                     return "Equipment 4: (Trade for supplies) \n" + GOTO2.returnMsg() + "Meet up with merchants and trade for resources \n" + "\n";
 
                 default:

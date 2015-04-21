@@ -20,13 +20,13 @@ namespace PCG
             switch (CallofWealth + 1)
             {
                 case 1:
-                    gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
-                    getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(0, 3));
+                    gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 3));
+                    getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(0, 4));
                     return "Wealth 1: (Gather Raw Materials) \n" + GOTO.returnMsg() + get.returnMsg() + "\n";
 
                 case 2:
-                    gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
-                    stealPCG Steal = new stealPCG(RandomNumberGenerator.NumberBetween(0, 1));
+                    gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 3));
+                    stealPCG Steal = new stealPCG(RandomNumberGenerator.NumberBetween(0, 2));
                     return "Wealth 2: (Steal valuables for resale) \n" + GOTO2.returnMsg() + Steal.returnMsg() + "\n";
 
                 case 3:

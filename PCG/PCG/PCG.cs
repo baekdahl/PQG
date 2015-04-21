@@ -98,6 +98,7 @@ namespace PCG
         public void MoveTo(Location newLocation)
         {
             Location Currentlocation = newLocation;
+            String whatever = World.LocationByID(5).LocationName;
         }
     }
 }

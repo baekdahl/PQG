@@ -17,7 +17,7 @@ namespace PCG
 
         public string returnMsg()
         {
-            switch (CallofGoto + 2)
+            switch (CallofGoto + 1)
             {
             case 1:
                 //Already there
@@ -32,7 +32,7 @@ namespace PCG
                 //learn
                 //"goto"
                 learnPCG learn = new learnPCG(RandomNumberGenerator.NumberBetween(0, 3));
-                return "Goto 3: \n" + learn.returnMsg() + "You walk to " + World.LocationByID(RandomNumberGenerator.NumberBetween(1, World.Locations.Count + 1)).LocationName + "\n";
+                return "Goto 3: You need to learn the location \n" + learn.returnMsg() + "You walk to " + World.LocationByID(RandomNumberGenerator.NumberBetween(1, World.Locations.Count + 1)).LocationName + "\n";
 
             default:
                 return "Something went wrong, in goto" + "\n";

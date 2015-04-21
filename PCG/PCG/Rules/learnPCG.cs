@@ -27,28 +27,28 @@ namespace PCG
                 //goto
                 //subquest
                 //"listen"
-                gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
-                subQuestPCG subquest = new subQuestPCG(RandomNumberGenerator.NumberBetween(0, 1));
+                gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 1));
+                subQuestPCG subquest = new subQuestPCG(RandomNumberGenerator.NumberBetween(0, 2));
 
-                return "Learn 2: \n" + GOTO.returnMsg() + subquest.returnMsg() + "You listen to " + World.NPCbyID(RandomNumberGenerator.NumberBetween(1, World.NPCs.Count + 1)).NPCName + "\n";
+                return "Learn 2: You need to go someplace, and perform a subquest \n" + GOTO.returnMsg() + subquest.returnMsg() + "You listen to " + World.NPCbyID(RandomNumberGenerator.NumberBetween(1, World.NPCs.Count + 1)).NPCName + "\n";
 
             case 3:
                 //goto
                 //get
                 //"read"
-                gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 2));
-                getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(0, 3));
-                return "Learn 3: \n" + GOTO2.returnMsg() + get.returnMsg() + "Read what is written \n";
+                gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(0, 1));
+                getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(0, 4));
+                return "Learn 3: Go someplace, and get something \n" + GOTO2.returnMsg() + get.returnMsg() + "Read what is written \n";
  
             case 4:
                 //get
                 //subquest
                 //"give"
                 //"Listen"
-                getPCG get2 = new getPCG(RandomNumberGenerator.NumberBetween(0, 3));
-                subQuestPCG subquest2 = new subQuestPCG(RandomNumberGenerator.NumberBetween(0, 1));
+                getPCG get2 = new getPCG(RandomNumberGenerator.NumberBetween(0, 4));
+                subQuestPCG subquest2 = new subQuestPCG(RandomNumberGenerator.NumberBetween(0, 2));
 
-                return "Learn 4: \n" + get2.returnMsg() + subquest2.returnMsg() + "the " + World.NPCbyID(RandomNumberGenerator.NumberBetween(1, World.NPCs.Count + 1)).NPCName + " gave you the info" + "\n";
+                return "Learn 4: Get something, perform subquest \n" + get2.returnMsg() + subquest2.returnMsg() + "the " + World.NPCbyID(RandomNumberGenerator.NumberBetween(1, World.NPCs.Count + 1)).NPCName + " gave you the info" + "\n";
 
             default:
                 return "Something went wrong, in Learn" + "\n";
