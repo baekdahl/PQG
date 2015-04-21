@@ -15,68 +15,204 @@ namespace PCG
         public PCG()
         {
             InitializeComponent();
+
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            comboBox2.Items.Add("Knowledge");
+            comboBox2.Items.Add("Comfort");
+            comboBox2.Items.Add("Reputation");
+            comboBox2.Items.Add("Serenity");
+            comboBox2.Items.Add("Protection");
+            comboBox2.Items.Add("Conquest");
+            comboBox2.Items.Add("Wealth");
+            comboBox2.Items.Add("Ability");
+            comboBox2.Items.Add("Equipment");
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            rtb1.Text += "NEW QUEST!\n";
-            Quests(RandomNumberGenerator.NumberBetween(0,9));
+            rtb1.Text = "";
+            Quests(RandomNumberGenerator.NumberBetween(1,10));
         }
 
         public void Quests(int QuestInputNumber){
-            switch (QuestInputNumber + 1)
+            switch (QuestInputNumber)
+            {
+                case 1:
+                    Knowledge KnowledgeQuest = new Knowledge(RandomNumberGenerator.NumberBetween(1, 5));
+                    rtb1.Text += KnowledgeQuest.returnMsg(); 
+                    break;
+
+                case 2:
+                    Comfort ComfortQuest = new Comfort(RandomNumberGenerator.NumberBetween(1, 3));
+                    rtb1.Text += ComfortQuest.returnMsg();
+                    break;
+
+                case 3:
+                    Reputation ReputationQuest = new Reputation(RandomNumberGenerator.NumberBetween(1, 4));
+                    rtb1.Text += ReputationQuest.returnMsg();
+                    break;
+
+                case 4:
+                    Serenity SerenityQuest = new Serenity(RandomNumberGenerator.NumberBetween(1, 8));
+                    rtb1.Text += SerenityQuest.returnMsg();
+                    break;
+
+                case 5:
+                    Protection ProtectionQuest = new Protection(RandomNumberGenerator.NumberBetween(1, 8));
+                    rtb1.Text += ProtectionQuest.returnMsg();
+                    break;
+
+                case 6:
+                    Conquest ConquestQuest = new Conquest(RandomNumberGenerator.NumberBetween(1, 3));
+                    rtb1.Text += ConquestQuest.returnMsg();
+                    break;
+
+                case 7:
+                    Wealth WealthQuest = new Wealth(RandomNumberGenerator.NumberBetween(1, 4));
+                    rtb1.Text += WealthQuest.returnMsg();
+                    break;
+
+                case 8:
+                    Ability AbilityQuest = new Ability(RandomNumberGenerator.NumberBetween(1, 8));
+                    rtb1.Text += AbilityQuest.returnMsg();
+                    break;
+
+                case 9:
+                    Equipment EquipmentQuest = new Equipment(RandomNumberGenerator.NumberBetween(1, 5));
+                    rtb1.Text += EquipmentQuest.returnMsg();
+                    break;
+
+                default:
+                    rtb1.Text += "No motivation have been selected! \n \n";
+                    break;
+            }
+        }
+
+        public void QuestsSelective(int QuestInputNumber)
+        {
+            switch (QuestInputNumber)
             {
             case 1:
-                Knowledge KnowledgeQuest = new Knowledge(RandomNumberGenerator.NumberBetween(0, 4));
-                rtb1.Text += KnowledgeQuest.returnMsg();
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    Knowledge KnowledgeQuest = new Knowledge(RandomNumberGenerator.NumberBetween(1, 5));
+                    rtb1.Text += KnowledgeQuest.returnMsg();
+                }
+                else
+                {
+                    Knowledge KnowledgeQuest = new Knowledge(comboBox1.SelectedIndex);
+                    rtb1.Text += KnowledgeQuest.returnMsg();
+                }
                 break;
 
             case 2:
-                Comfort ComfortQuest = new Comfort(RandomNumberGenerator.NumberBetween(0, 2));
-                rtb1.Text += ComfortQuest.returnMsg();
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    Comfort ComfortQuest = new Comfort(RandomNumberGenerator.NumberBetween(1, 3));
+                    rtb1.Text += ComfortQuest.returnMsg();
+                }
+                else
+                {
+                    Comfort ComfortQuest = new Comfort(comboBox1.SelectedIndex);
+                    rtb1.Text += ComfortQuest.returnMsg();
+                }
                 break;
 
             case 3:
-                Reputation ReputationQuest = new Reputation(RandomNumberGenerator.NumberBetween(0, 3));
-                rtb1.Text += ReputationQuest.returnMsg();
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    Reputation ReputationQuest = new Reputation(RandomNumberGenerator.NumberBetween(1, 4));
+                    rtb1.Text += ReputationQuest.returnMsg();
+                }
+                else
+                {
+                    Reputation ReputationQuest = new Reputation(comboBox1.SelectedIndex);
+                    rtb1.Text += ReputationQuest.returnMsg();
+                }
                 break;
 
             case 4:
-                Conquest ConquestQuest = new Conquest(RandomNumberGenerator.NumberBetween(0, 2));
-                rtb1.Text += ConquestQuest.returnMsg();
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    Serenity SerenityQuest = new Serenity(RandomNumberGenerator.NumberBetween(1, 8));
+                    rtb1.Text += SerenityQuest.returnMsg();
+                }
+                else
+                {
+                    Serenity SerenityQuest = new Serenity(comboBox1.SelectedIndex);
+                    rtb1.Text += SerenityQuest.returnMsg();
+                }
                 break;
 
             case 5:
-                Wealth WealthQuest = new Wealth(RandomNumberGenerator.NumberBetween(0, 3));
-                rtb1.Text += WealthQuest.returnMsg();
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    Protection ProtectionQuest = new Protection(RandomNumberGenerator.NumberBetween(1, 8));
+                    rtb1.Text += ProtectionQuest.returnMsg();
+                }
+                else
+                {
+                    Protection ProtectionQuest = new Protection(comboBox1.SelectedIndex);
+                    rtb1.Text += ProtectionQuest.returnMsg();
+                }
                 break;
 
             case 6:
-                Equipment EquipmentQuest = new Equipment(RandomNumberGenerator.NumberBetween(0, 4));
-                rtb1.Text += EquipmentQuest.returnMsg();
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    Conquest ConquestQuest = new Conquest(RandomNumberGenerator.NumberBetween(1, 3));
+                    rtb1.Text += ConquestQuest.returnMsg();
+                }
+                else
+                {
+                    Conquest ConquestQuest = new Conquest(comboBox1.SelectedIndex);
+                    rtb1.Text += ConquestQuest.returnMsg();
+                }
                 break;
 
             case 7:
-                Ability AbilityQuest = new Ability(RandomNumberGenerator.NumberBetween(0, 7));
-                rtb1.Text += AbilityQuest.returnMsg();
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    Wealth WealthQuest = new Wealth(RandomNumberGenerator.NumberBetween(1, 4));
+                    rtb1.Text += WealthQuest.returnMsg();
+                }
+                else
+                {
+                    Wealth WealthQuest = new Wealth(comboBox1.SelectedIndex);
+                    rtb1.Text += WealthQuest.returnMsg();
+                }
                 break;
 
             case 8:
-                Serenity SerenityQuest = new Serenity(RandomNumberGenerator.NumberBetween(0, 7));
-                rtb1.Text += SerenityQuest.returnMsg();
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    Ability AbilityQuest = new Ability(RandomNumberGenerator.NumberBetween(1, 8));
+                    rtb1.Text += AbilityQuest.returnMsg();
+                }
+                else
+                {
+                    Ability AbilityQuest = new Ability(comboBox1.SelectedIndex);
+                    rtb1.Text += AbilityQuest.returnMsg();
+                }
                 break;
 
             case 9:
-                Protection ProtectionQuest = new Protection(RandomNumberGenerator.NumberBetween(0, 7));
-                rtb1.Text += ProtectionQuest.returnMsg();
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    Equipment EquipmentQuest = new Equipment(RandomNumberGenerator.NumberBetween(1, 5));
+                    rtb1.Text += EquipmentQuest.returnMsg();
+                }
+                else
+                {
+                    Equipment EquipmentQuest = new Equipment(comboBox1.SelectedIndex);
+                    rtb1.Text += EquipmentQuest.returnMsg();
+                }
                 break;
 
             default:
-                rtb1.Text += "SOMETHING HAVE GONE WRONG";
-                rtb1.Text += "SOMETHING HAVE GONE WRONG";
-                rtb1.Text += "SOMETHING HAVE GONE WRONG";
-                rtb1.Text += "SOMETHING HAVE GONE WRONG";
-                rtb1.Text += "SOMETHING HAVE GONE WRONG";
+                rtb1.Text += "No Motivation have been selected! \n \n";
                 break;
             }
         }
@@ -99,6 +235,109 @@ namespace PCG
         {
             Location Currentlocation = newLocation;
             String whatever = World.LocationByID(5).LocationName;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            QuestsSelective(comboBox2.SelectedIndex);
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox1.Enabled = true;
+
+            if (comboBox2.SelectedIndex == 0)
+            {
+                comboBox1.Items.Clear();
+                comboBox1.Items.Add("Random");
+                comboBox1.Items.Add("1");
+                comboBox1.Items.Add("2");
+                comboBox1.Items.Add("3");
+                comboBox1.Items.Add("4");
+            }
+
+            if (comboBox2.SelectedIndex == 1)
+            {
+                comboBox1.Items.Clear();
+                comboBox1.Items.Add("Random");
+                comboBox1.Items.Add("1");
+                comboBox1.Items.Add("2");
+            }
+
+            if (comboBox2.SelectedIndex == 2)
+            {
+                comboBox1.Items.Clear();
+                comboBox1.Items.Add("Random");
+                comboBox1.Items.Add("1");
+                comboBox1.Items.Add("2");
+                comboBox1.Items.Add("3");
+            }
+
+            if (comboBox2.SelectedIndex == 3)
+            {
+                comboBox1.Items.Clear();
+                comboBox1.Items.Add("Random");
+                comboBox1.Items.Add("1");
+                comboBox1.Items.Add("2");
+                comboBox1.Items.Add("3");
+                comboBox1.Items.Add("4");
+                comboBox1.Items.Add("5");
+                comboBox1.Items.Add("6");
+                comboBox1.Items.Add("7");
+            }
+
+            if (comboBox2.SelectedIndex == 4)
+            {
+                comboBox1.Items.Clear();
+                comboBox1.Items.Add("Random");
+                comboBox1.Items.Add("1");
+                comboBox1.Items.Add("2");
+                comboBox1.Items.Add("3");
+                comboBox1.Items.Add("4");
+                comboBox1.Items.Add("5");
+                comboBox1.Items.Add("6");
+                comboBox1.Items.Add("7");
+            }
+
+            if (comboBox2.SelectedIndex == 5)
+            {
+                comboBox1.Items.Clear();
+                comboBox1.Items.Add("Random");
+                comboBox1.Items.Add("1");
+                comboBox1.Items.Add("2");
+            }
+
+            if (comboBox2.SelectedIndex == 6)
+            {
+                comboBox1.Items.Clear();
+                comboBox1.Items.Add("Random");
+                comboBox1.Items.Add("1");
+                comboBox1.Items.Add("2");
+                comboBox1.Items.Add("3");
+            }
+
+            if (comboBox2.SelectedIndex == 7)
+            {
+                comboBox1.Items.Clear();
+                comboBox1.Items.Add("Random");
+                comboBox1.Items.Add("1");
+                comboBox1.Items.Add("2");
+                comboBox1.Items.Add("3");
+                comboBox1.Items.Add("4");
+                comboBox1.Items.Add("5");
+                comboBox1.Items.Add("6");
+                comboBox1.Items.Add("7");
+            }
+
+            if (comboBox2.SelectedIndex == 8)
+            {
+                comboBox1.Items.Clear();
+                comboBox1.Items.Add("Random");
+                comboBox1.Items.Add("1");
+                comboBox1.Items.Add("2");
+                comboBox1.Items.Add("3");
+                comboBox1.Items.Add("4");
+            }
         }
     }
 }
