@@ -15,24 +15,28 @@ namespace PCG
             CallofWealth = callofWealth;
         }
 
-        public string returnMsg()
+        public string returnMsg(out string Questlog)
         {
             switch (CallofWealth)
             {
                 case 1:
                     gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
                     getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(1, 5));
-                    return "Wealth 1: (Gather Raw Materials) \n" + GOTO.returnMsg() + "\n" + get.returnMsg() + "\n";
+                    Questlog = "Wealth 1: (Gather Raw Materials) \n"; 
+                    return GOTO.returnMsg() + "\n" + get.returnMsg() + "\n";
 
                 case 2:
                     gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
                     stealPCG Steal = new stealPCG(RandomNumberGenerator.NumberBetween(1, 3));
-                    return "Wealth 2: (Steal valuables for resale) \n" + GOTO2.returnMsg() + "\n" + Steal.returnMsg() + "\n";
+                    Questlog = "Wealth 2: (Steal valuables for resale) \n";
+                    return GOTO2.returnMsg() + "\n" + Steal.returnMsg() + "\n";
 
                 case 3:
-                    return "Wealth 3: (Make valuables for resale) \n" + "You craft some valuables \n";
+                    Questlog = "Wealth 3: (Make valuables for resale) \n"; 
+                    return "You craft some valuables \n";
 
                 default:
+                    Questlog = "Something went wrong, in Wealth";
                     return "Something went wrong, in Wealth";
             }
         }
