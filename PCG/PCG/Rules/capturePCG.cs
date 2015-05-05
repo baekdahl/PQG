@@ -20,6 +20,7 @@ namespace PCG
                 //"capture"
                 getPCG get = new getPCG();
                 gotoPCG GOTO = new gotoPCG();
+
                 return "Capture 1: Get something, go someplace and use it to capture somebody \n" + get.returnMsg() + "\n" + GOTO.returnMsg();
 
             default:

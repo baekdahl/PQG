@@ -1,0 +1,138 @@
+Ability 1: (Assemble tool for new skill)
+Go craft a new set of tools, with your newly acquired skills.
+You assemble some tools for a new skill. You Equip the newly crafted skill
+
+Ability 2: (Obtain training materials)
+To improve your skills, you will need to get some <item:materials> to practice with.
+You use the materials.
+
+Ability 3: (Use existing tools)
+You need to craft up some valuables, luckily you already have the required tools.
+You use the tools you already had
+
+Ability 4: (Practice combat)
+You need to practice your skill at arms, go to the nearest target dummy and hit it a few times.
+Practice combat.
+
+Ability 5: (Practice skill)
+To get better at your current skill, you must use some of the training materials you have.
+Practice skill.
+
+Ability 6: (Research a skill(1))
+To learn a new skill you must research it. Go get something, and use it to acquire its skill.
+Use the skill
+
+Ability 7: (Research a skill(2))
+To learn a new skill you must research it. Go get something, and experiment with it, until you figure out it purpose.
+Experiment with the skill
+
+Comfort 1: (Obtain Luxuries)
+I need you to obtain some <Luxuries:ITEM> for me, and if you refuse I will make you regret. NOW GO!
+
+Comfort 2: (Kill Pests)
+Please, can you help me! I’m the baker of this town, and <PEST> have gotten into my storage. If I can’t get into my storage I can’t bake any more bread for the town. Please help me by clearing them out.
+
+Conquest 1: (Attack enemy)
+We need help taking back the city, from these <enemies>. Can we request your aid in taking back <Location>.
+Damage the Enemy
+
+Conquest 2: (Steal stuff)
+I need you to do some work for me. Please would you go to <location>, and steal the <item> for me? Please go to <location> and deliver it to <npc> afterwards.
+Give <ITEM> to <NPC>
+
+Equipment 1: (Assemble)
+You there, are you as good at your trait as you are with your swordplay? We could really use the help from a talented worker, to help us to restore our stocks.
+You assemble some gear
+
+Equipment 2: (Deliver Supplies)
+Hey you there, can I request a moment? I am a merchant from <LOCATION>, and I seem to have lost my way, could you be of assistance and take these materials to the <NPC:JOB>.
+Give the materials to 
+
+Equipment 3: (Steal Supplies)
+You want to earn a few coins? You see those supplies over there? Good, I need you to go get them for me. ehmm I of course own them, I just need someone to pick them up for me.
+
+Equipment 4: (Trade for supplies)
+Please go to the big market in <location>, and find me some <item:supplies>.
+Meet up with merchants and trade for resources 
+
+Knowledge 1: Deliver
+Dear stranger, I must ask of your aid. You see I have found this powerful <ITEM> in a dungeon, I was exploring. However I am not quite ready to go home yet, but I need <NPC> to take a look at this <ITEM>. Will you please take it to <NPC>, I’m sure it will be worth your while.
+
+Knowledge 2: (Spy)
+Hey you there! Wanna earn some gold? You see that person over there? That is <NPC>, I need you to follow him/her and report back to me once you have figured out what <NPC> are doing.
+
+Knowledge 3: (Interview)
+I need your help! I have heard some troubling news around town, but I need to confirm rumour spreading. Can you <goto> and speak with <NPC>? He/she should be able to clear up if its true or just a rumor.
+
+Knowledge 4: (Use Item In Field)
+Hey you there, Please come and give me a hand, I need you to go and take this <ITEM> to <LOCATION> and tell me what happens. It’s probably not that dangerous.
+
+Protection 1: (Attack threatening entities)
+Please help us, the <enemy> have been really violent lately. Could you help us by taking them down?
+
+Protection 2: (Treat or Repair(1))
+Can you please take this <item:Consumable> and go use it at <location>. It will really help the entire village.
+
+Protection 3: (Treat or Repair(2))
+Please helps us! After the last attack one of our walls have started collapsing, so we need all the manpower we have to keep it intact. Please go there and help repair it.
+
+Protection 4: (Create Diversion(1))
+Please sire, we need your help. We are currently under attack at our gates and we need to reinforce it if we don’t want to fall. Could you use the back gate and goto <LOCATION> to use these explosives.
+
+Protection 5: (Create Diversion(2))
+Please sire, we need help to with closing our gate. We need you to go make a diversion so we can get the last few townsfolk inside before the <enemy> hit the gate.
+
+Protection 6: (Assemble Fortification)
+I need help with assembling some fortifications, could you be of assistance?
+
+Protection 7: (Guard Entity)
+Please sire, you need to help me. Please go and find <NPC>, he is in grave danger, and needs to be defended.
+
+Reputation 1: (Obtain rare item)
+Hey you! Go bring me some <rare:ITEM>. oh you don’t work for me? Oh well I am still willing to let you do the job, go bring me the <rare:ITEM> and you will be well rewarded, you might even get another job.
+
+Reputation 2: (Kill enemies)
+This is not good! We need you to do us a favour, it seems like that some <enemies> have taken up hold in a nearby ruin. Could you go take care of them, so the town will be safe?
+
+Reputation 3: (Visit a Dangerous place)
+I need  you to go and survey a ruin up ahead. We have had disturbing rumours that the enemies have been gathering there. You don’t need to do anything but survey the area.
+
+Serenity 1: (Revenge, Justice)
+We have been attacked and are in dire need of your aid. You see <NPC> went amok during the night after losing a brawl in the tavern. He/She fled town before we could get around to capture him/her. We can’t leave town, but could we get you to hunt him/she down.
+
+Serenity 2: (Capture Criminal(1))
+Enough must be enough, do you have a moment to help me? You see a prisoner called <NPC> escaped last night, we must capture him again! Please find out where he is and bring him/her back.
+
+Serenity 3: (Capture Criminal(2))
+Hey there, got time to help us? You see a <enemy> <NPC> have made a lot of trouble lately, but we do not have the manpower to bring him in. Could you go and capture him/her for the us?
+
+Serenity 4: (Check on NPC(1))
+Hey you there, can you help me with a small favour? You see my friend have fallen sick, and I don’t have the time to go check on him, could you go check for me?
+
+Serenity 5: (Check on NPC(2))
+Hey you there, can you help me with a small favour? You see my friend have fallen sick, and I don’t have the time to go bring him his medicine, could you go check for me?
+
+Serenity 6: (Recover Lost/stolen item)
+Hey you, could you help me? I seem to have misplaced my <ITEM>, I was travelling through <LOCATION>, could you go get it back for me?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -9,6 +9,7 @@ namespace PCG
     public class Protection
     {
         public int CallOfProtection = RandomNumberGenerator.NumberBetween(1, 8);
+        ReadTxt read = new ReadTxt();
 
         public string returnMsg(out string Questlog)
         {
@@ -18,40 +19,40 @@ namespace PCG
                     gotoPCG GOTO = new gotoPCG();
                     gotoPCG GOTO2 = new gotoPCG();
 
-                    Questlog = "Protection 1: (Attack threatening entities) \n" + "Please help us, the <enemy> have been really violent lately. Could you help us by taking them down?";
+                    Questlog = read.motivationText[69] + "\n" + read.motivationText[70];
                     return GOTO.returnMsg() + "\n" + "Damage Entities \n" + GOTO2.returnMsg() + "\n" + "Report success \n";
 
                 case 2:
                     getPCG get = new getPCG();
                     gotoPCG GOTO3 = new gotoPCG();
-                    Questlog = "Protection 2: (Treat or Repair(1)) \n" + "Can you please take this <item:Consumable> and go use it at <location>. It will really help the entire village.";
+                    Questlog = read.motivationText[72] + "\n" + read.motivationText[73];
                     return get.returnMsg() + "\n" + GOTO3.returnMsg() + "\n" + "Use item\n";
 
                 case 3:
                     gotoPCG GOTO4 = new gotoPCG();
-                    Questlog = "Protection 3: (Treat or Repair(2)) \n" + "Please helps us! After the last attack one of our walls have started collapsing, so we need all the manpower we have to keep it intact. Please go there and help repair it.";
+                    Questlog = read.motivationText[75] + "\n" + read.motivationText[76];
                     return GOTO4.returnMsg() + "\n" + "Repair item\n";
 
                 case 4:
                     gotoPCG GOTO5 = new gotoPCG();
                     getPCG get2 = new getPCG();
-                    Questlog = "Protection 4: (Create Diversion(1)) \n" + "Please sire, we need your help. We are currently under attack at our gates and we need to reinforce it if we don’t want to fall. Could you use the back gate and goto <LOCATION> to use these explosives.";
+                    Questlog = read.motivationText[78] + "\n" + read.motivationText[79];
                     return get2.returnMsg() + "\n" + GOTO5.returnMsg() + "\n" + "Use ITEM\n";
 
                 case 5:
                     gotoPCG GOTO6 = new gotoPCG();
 
-                    Questlog = "Protection 5: (Create Diversion(2)) \n" + "Please sire, we need help to with closing our gate. We need you to go make a diversion so we can get the last few townsfolk inside before the <enemy> hit the gate.";
+                    Questlog = read.motivationText[81] + "\n" + read.motivationText[82];
                     return GOTO6.returnMsg() + "\n" + "Damage NPC \n";
 
                 case 6:
                     gotoPCG GOTO7 = new gotoPCG();
-                    Questlog = "Protection 6: (Assemble Fortification) \n" + "I need help with assembling some fortifications, could you be of assistance?";
+                    Questlog = read.motivationText[84] + "\n" + read.motivationText[85];
                     return GOTO7.returnMsg() + "\n" + "repair item\n";
 
                 case 7:
                     gotoPCG GOTO8 = new gotoPCG();
-                    Questlog = "Protection 7: (Guard Entity) \n" + "Please sire, you need to help me. Please go and find <NPC>, he is in grave danger, and needs to be defended.";
+                    Questlog = read.motivationText[87] + "\n" + read.motivationText[88];
                     return GOTO8.returnMsg() + "\n" + "Defend the Entity\n";
 
                 default:

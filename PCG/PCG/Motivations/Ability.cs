@@ -9,42 +9,43 @@ namespace PCG
     public class Ability
     {
         public int CallOfAbility = RandomNumberGenerator.NumberBetween(1, 8);
+        ReadTxt read = new ReadTxt();
 
         public string returnMsg(out string QuestLog)
         {  
             switch (CallOfAbility)
             {
                 case 1:
-                    QuestLog = "Ability 1: (Assemble tool for new skill) \n" + "Go craft a new set of tools, with your newly acquired skills."; 
-                    return "You assemble some tools for a new skill." + " You Equip the newly crafted skill \n";
+                    QuestLog = read.motivationText[0] + "\n" + read.motivationText[1];
+                    return read.motivationText[2];
 
                 case 2:
                     getPCG get = new getPCG();
 
-                    QuestLog = "Ability 2: (Obtain training materials) \n" + "To improve your skills, you will need to get some <item:materials> to practice with.";
-                    return get.returnMsg() + "\n" + "You use the materials \n";
+                    QuestLog = read.motivationText[4] + "\n" + read.motivationText[5];
+                    return get.returnMsg() + "\n" + read.motivationText[6];
 
                 case 3:
-                    QuestLog = "Ability 3: (Use excisting tools) \n" + "You need to craft up some valuables, luckily you already have the required tools.";
-                    return "You use the tools you already had \n" + "\n";
+                    QuestLog = read.motivationText[8] + "\n" + read.motivationText[9];
+                    return read.motivationText[10];
 
                 case 4:
-                    QuestLog = "Ability 4: (Practice combat) \n" + "You need to practice your skill at arms, go to the nearst target dummy and hit it a few times.";
-                    return "Practice combat \n";
+                    QuestLog = read.motivationText[12] + "\n" + read.motivationText[13];
+                    return read.motivationText[14];
 
                 case 5:
-                    QuestLog = "Ability 5: (Practice skill) \n" + "To get better at your current skill, you must use some of the training materials you have.";
-                    return "Practice skill \n";
+                    QuestLog = read.motivationText[16] + "\n" + read.motivationText[17];
+                    return read.motivationText[18];
 
                 case 6:
                     getPCG get2 = new getPCG();
-                    QuestLog = "Ability 6: (Research a skill(1)) \n" + "To learn a new skill you must research it. Go get something, and use it to acquire its skill.";
-                    return get2.returnMsg() + "\n" + "Use the skill \n";
+                    QuestLog = read.motivationText[20] + "\n" + read.motivationText[21];
+                    return get2.returnMsg() + "\n" + read.motivationText[22];
 
                 case 7:
                     getPCG get3 = new getPCG();
-                    QuestLog = "Ability 7: (Research a skill(2)) \n" + "To learn a new skill you must research it. Go get something, and experiment with it, until you figure out it purpose.";
-                    return get3.returnMsg() + "\n" + "Experiment with the skill \n";
+                    QuestLog = read.motivationText[24] + "\n" + read.motivationText[25];
+                    return get3.returnMsg() + "\n" + read.motivationText[26];
 
                 default:
                     QuestLog = "Something went wrong, in Ability";
