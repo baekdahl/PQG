@@ -43,55 +43,55 @@ namespace PCG
             switch (QuestInputNumber)
             {
                 case 1:
-                    Knowledge KnowledgeQuest = new Knowledge(RandomNumberGenerator.NumberBetween(1, 5));
+                    Knowledge KnowledgeQuest = new Knowledge();
                     rtb1.Text += KnowledgeQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                     break;
 
                 case 2:
-                    Comfort ComfortQuest = new Comfort(RandomNumberGenerator.NumberBetween(1, 3));
+                    Comfort ComfortQuest = new Comfort();
                     rtb1.Text += ComfortQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                     break;
 
                 case 3:
-                    Reputation ReputationQuest = new Reputation(RandomNumberGenerator.NumberBetween(1, 4));
+                    Reputation ReputationQuest = new Reputation();
                     rtb1.Text += ReputationQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                     break;
 
                 case 4:
-                    Serenity SerenityQuest = new Serenity(RandomNumberGenerator.NumberBetween(1, 8));
+                    Serenity SerenityQuest = new Serenity();
                     rtb1.Text += SerenityQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                     break;
 
                 case 5:
-                    Protection ProtectionQuest = new Protection(RandomNumberGenerator.NumberBetween(1, 8));
+                    Protection ProtectionQuest = new Protection();
                     rtb1.Text += ProtectionQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                     break;
 
                 case 6:
-                    Conquest ConquestQuest = new Conquest(RandomNumberGenerator.NumberBetween(1, 3));
+                    Conquest ConquestQuest = new Conquest();
                     rtb1.Text += ConquestQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                     break;
 
                 case 7:
-                    Wealth WealthQuest = new Wealth(RandomNumberGenerator.NumberBetween(1, 4));
+                    Wealth WealthQuest = new Wealth();
                     rtb1.Text += WealthQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                     break;
 
                 case 8:
-                    Ability AbilityQuest = new Ability(RandomNumberGenerator.NumberBetween(1, 8));
+                    Ability AbilityQuest = new Ability();
                     rtb1.Text += AbilityQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                     break;
 
                 case 9:
-                    Equipment EquipmentQuest = new Equipment(RandomNumberGenerator.NumberBetween(1, 5));
+                    Equipment EquipmentQuest = new Equipment();
                     rtb1.Text += EquipmentQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                     break;
@@ -110,13 +110,14 @@ namespace PCG
             case 1:
                 if (comboBox1.SelectedIndex == 0)
                 {
-                    Knowledge KnowledgeQuest = new Knowledge(RandomNumberGenerator.NumberBetween(1, 5));
+                    Knowledge KnowledgeQuest = new Knowledge();
                     rtb1.Text += KnowledgeQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                 }
                 else
                 {
-                    Knowledge KnowledgeQuest = new Knowledge(comboBox1.SelectedIndex);
+                    Knowledge KnowledgeQuest = new Knowledge();
+                    KnowledgeQuest.CallOfKnowledge = comboBox1.SelectedIndex;
                     rtb1.Text += KnowledgeQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                 }
@@ -125,13 +126,14 @@ namespace PCG
             case 2:
                 if (comboBox1.SelectedIndex == 0)
                 {
-                    Comfort ComfortQuest = new Comfort(RandomNumberGenerator.NumberBetween(1, 3));
+                    Comfort ComfortQuest = new Comfort();
                     rtb1.Text += ComfortQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                 }
                 else
                 {
-                    Comfort ComfortQuest = new Comfort(comboBox1.SelectedIndex);
+                    Comfort ComfortQuest = new Comfort();
+                    ComfortQuest.CallOfComfort = comboBox1.SelectedIndex;
                     rtb1.Text += ComfortQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                 }
@@ -140,13 +142,14 @@ namespace PCG
             case 3:
                 if (comboBox1.SelectedIndex == 0)
                 {
-                    Reputation ReputationQuest = new Reputation(RandomNumberGenerator.NumberBetween(1, 4));
+                    Reputation ReputationQuest = new Reputation();
                     rtb1.Text += ReputationQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                 }
                 else
                 {
-                    Reputation ReputationQuest = new Reputation(comboBox1.SelectedIndex);
+                    Reputation ReputationQuest = new Reputation();
+                    ReputationQuest.CallofReputation = comboBox1.SelectedIndex;
                     rtb1.Text += ReputationQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                 }
@@ -155,13 +158,14 @@ namespace PCG
             case 4:
                 if (comboBox1.SelectedIndex == 0)
                 {
-                    Serenity SerenityQuest = new Serenity(RandomNumberGenerator.NumberBetween(1, 8));
+                    Serenity SerenityQuest = new Serenity();
                     rtb1.Text += SerenityQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                 }
                 else
                 {
-                    Serenity SerenityQuest = new Serenity(comboBox1.SelectedIndex);
+                    Serenity SerenityQuest = new Serenity();
+                    SerenityQuest.CallOfSerenity = comboBox1.SelectedIndex;
                     rtb1.Text += SerenityQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                 }
@@ -170,13 +174,14 @@ namespace PCG
             case 5:
                 if (comboBox1.SelectedIndex == 0)
                 {
-                    Protection ProtectionQuest = new Protection(RandomNumberGenerator.NumberBetween(1, 8));
+                    Protection ProtectionQuest = new Protection();
                     rtb1.Text += ProtectionQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                 }
                 else
                 {
-                    Protection ProtectionQuest = new Protection(comboBox1.SelectedIndex);
+                    Protection ProtectionQuest = new Protection();
+                    ProtectionQuest.CallOfProtection = comboBox1.SelectedIndex;
                     rtb1.Text += ProtectionQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                 }
@@ -185,13 +190,14 @@ namespace PCG
             case 6:
                 if (comboBox1.SelectedIndex == 0)
                 {
-                    Conquest ConquestQuest = new Conquest(RandomNumberGenerator.NumberBetween(1, 3));
+                    Conquest ConquestQuest = new Conquest();
                     rtb1.Text += ConquestQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                 }
                 else
                 {
-                    Conquest ConquestQuest = new Conquest(comboBox1.SelectedIndex);
+                    Conquest ConquestQuest = new Conquest();
+                    ConquestQuest.CallofConquest = comboBox1.SelectedIndex;
                     rtb1.Text += ConquestQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                 }
@@ -200,13 +206,14 @@ namespace PCG
             case 7:
                 if (comboBox1.SelectedIndex == 0)
                 {
-                    Wealth WealthQuest = new Wealth(RandomNumberGenerator.NumberBetween(1, 4));
+                    Wealth WealthQuest = new Wealth();
                     rtb1.Text += WealthQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                 }
                 else
                 {
-                    Wealth WealthQuest = new Wealth(comboBox1.SelectedIndex);
+                    Wealth WealthQuest = new Wealth();
+                    WealthQuest.CallofWealth = comboBox1.SelectedIndex;
                     rtb1.Text += WealthQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                 }
@@ -215,13 +222,14 @@ namespace PCG
             case 8:
                 if (comboBox1.SelectedIndex == 0)
                 {
-                    Ability AbilityQuest = new Ability(RandomNumberGenerator.NumberBetween(1, 8));
+                    Ability AbilityQuest = new Ability();
                     rtb1.Text += AbilityQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                 }
                 else
                 {
-                    Ability AbilityQuest = new Ability(comboBox1.SelectedIndex);
+                    Ability AbilityQuest = new Ability();
+                    AbilityQuest.CallOfAbility = comboBox1.SelectedIndex;
                     rtb1.Text += AbilityQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                 }
@@ -230,13 +238,14 @@ namespace PCG
             case 9:
                 if (comboBox1.SelectedIndex == 0)
                 {
-                    Equipment EquipmentQuest = new Equipment(RandomNumberGenerator.NumberBetween(1, 5));
+                    Equipment EquipmentQuest = new Equipment();
                     rtb1.Text += EquipmentQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                 }
                 else
                 {
-                    Equipment EquipmentQuest = new Equipment(comboBox1.SelectedIndex);
+                    Equipment EquipmentQuest = new Equipment();
+                    EquipmentQuest.CallOfEquipment = comboBox1.SelectedIndex;
                     rtb1.Text += EquipmentQuest.returnMsg(out holder);
                     rtbQuest.Text += holder;
                 }
@@ -262,13 +271,7 @@ namespace PCG
         {
             ScrollToBottomOfMessages();
         }
-/*
-        public void MoveTo(Location newLocation)
-        {
-            Location Currentlocation = newLocation;
-            String whatever = World.LocationByID(5).LocationName;
-        }
-*/
+
         private void button2_Click(object sender, EventArgs e)
         {
             rtb1.Text = "";

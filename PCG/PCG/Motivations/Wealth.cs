@@ -8,26 +8,21 @@ namespace PCG
 {
     public class Wealth
     {
-        private int CallofWealth { get; set; }
-
-        public Wealth(int callofWealth)
-        {
-            CallofWealth = callofWealth;
-        }
+        public int CallofWealth = RandomNumberGenerator.NumberBetween(1, 4);
 
         public string returnMsg(out string Questlog)
         {
             switch (CallofWealth)
             {
                 case 1:
-                    gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
-                    getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(1, 5));
+                    gotoPCG GOTO = new gotoPCG();
+                    getPCG get = new getPCG();
                     Questlog = "Wealth 1: (Gather Raw Materials) \n" + "Please my friend, do you have the time to spare, to help me? You see I have been running out of <item:MATERIAL> for a while now. Please could you go and get me some?"; 
                     return GOTO.returnMsg() + "\n" + get.returnMsg() + "\n";
 
                 case 2:
-                    gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
-                    stealPCG Steal = new stealPCG(RandomNumberGenerator.NumberBetween(1, 3));
+                    gotoPCG GOTO2 = new gotoPCG();
+                    stealPCG Steal = new stealPCG();
                     Questlog = "Wealth 2: (Steal valuables for resale) \n" + "Hey you! Are you interested in earning some easy money? Well, if you go and steal these <item:valuables> for me, I will make sure to resell them at a better cost.";
                     return GOTO2.returnMsg() + "\n" + Steal.returnMsg() + "\n";
 

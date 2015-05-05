@@ -8,12 +8,7 @@ namespace PCG
 {
     public class capturePCG
     {
-        private int CallOfCapture;
-
-        public capturePCG(int callOfCapture)
-        {
-            CallOfCapture = callOfCapture;
-        }
+        private int CallOfCapture = 1;
 
         public string returnMsg()
         {
@@ -23,8 +18,8 @@ namespace PCG
                 //get
                 //goto
                 //"capture"
-                getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(1, 4));
-                gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
+                getPCG get = new getPCG();
+                gotoPCG GOTO = new gotoPCG();
                 return "Capture 1: Get something, go someplace and use it to capture somebody \n" + get.returnMsg() + "\n" + GOTO.returnMsg();
 
             default:

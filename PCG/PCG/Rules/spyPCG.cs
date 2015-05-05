@@ -8,12 +8,7 @@ namespace PCG
 {
     public class spyPCG
     {
-        private int CallOfSpy;
-
-        public spyPCG(int callOfSpy)
-        {
-            CallOfSpy = callOfSpy;
-        }
+        private int CallOfSpy = 1;
 
         public string returnMsg()
         {
@@ -24,8 +19,8 @@ namespace PCG
                 //"spy"
                 //goto
                 //"report"
-                gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
-                gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
+                gotoPCG GOTO = new gotoPCG();
+                gotoPCG GOTO2 = new gotoPCG();
                 return "Spy 1: Go someplace, spy on somebody, return and report \n" + GOTO.returnMsg() + "\n" + GOTO2.returnMsg();
 
             default:

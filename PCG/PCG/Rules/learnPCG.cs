@@ -8,12 +8,7 @@ namespace PCG
 {
     public class learnPCG
     {
-        private int CallOfLearn { get; set; }
-
-        public learnPCG(int callOfLearn)
-        {
-            CallOfLearn = callOfLearn;
-        }
+        private int CallOfLearn = RandomNumberGenerator.NumberBetween(1, 5);
 
         public string returnMsg()
         {
@@ -27,8 +22,8 @@ namespace PCG
                 //goto
                 //subquest
                 //"listen"
-                gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
-                subQuestPCG subquest = new subQuestPCG(RandomNumberGenerator.NumberBetween(1, 3));
+                gotoPCG GOTO = new gotoPCG();
+                subQuestPCG subquest = new subQuestPCG();
 
                 return "Learn 2: Go someplace, perform subquest, get info from NPC \n" + GOTO.returnMsg() + "\n" + subquest.returnMsg();
 
@@ -36,8 +31,8 @@ namespace PCG
                 //goto
                 //get
                 //"read"
-                gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
-                getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(1, 5));
+                gotoPCG GOTO2 = new gotoPCG();
+                getPCG get = new getPCG();
                 return "Learn 3: Go someplace, get something, and read what is written on it \n" + GOTO2.returnMsg() + "\n" + get.returnMsg();
  
             case 4:
@@ -45,8 +40,8 @@ namespace PCG
                 //subquest
                 //"give"
                 //"Listen"
-                getPCG get2 = new getPCG(RandomNumberGenerator.NumberBetween(1, 5));
-                subQuestPCG subquest2 = new subQuestPCG(RandomNumberGenerator.NumberBetween(1, 3));
+                getPCG get2 = new getPCG();
+                subQuestPCG subquest2 = new subQuestPCG();
                 return "Learn 4: Get something, perform subquest, give to NPC in return for info \n" + get2.returnMsg() + "\n" + subquest2.returnMsg();
 
             default:

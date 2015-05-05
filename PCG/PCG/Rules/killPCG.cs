@@ -8,12 +8,7 @@ namespace PCG
 {
     public class killPCG
     {
-        private int CallOfKill;
-
-        public killPCG(int callOfKill)
-        {
-            CallOfKill = callOfKill;
-        }
+        private int CallOfKill = 1;
 
         public string returnMsg()
         {
@@ -22,7 +17,7 @@ namespace PCG
             case 1:
                 //goto
                 //"kill"
-                gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
+                gotoPCG GOTO = new gotoPCG();
                 return "Kill 1: Go someplace and kill somebody \n" + GOTO.returnMsg();
 
             default:

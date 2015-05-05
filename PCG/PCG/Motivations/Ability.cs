@@ -8,15 +8,10 @@ namespace PCG
 {
     public class Ability
     {
-        private int CallOfAbility { get; set; }
-
-        public Ability(int callOfAbility)
-        {
-            CallOfAbility = callOfAbility;
-        }
+        public int CallOfAbility = RandomNumberGenerator.NumberBetween(1, 8);
 
         public string returnMsg(out string QuestLog)
-        {
+        {  
             switch (CallOfAbility)
             {
                 case 1:
@@ -24,7 +19,7 @@ namespace PCG
                     return "You assemble some tools for a new skill." + " You Equip the newly crafted skill \n";
 
                 case 2:
-                    getPCG get = new getPCG(RandomNumberGenerator.NumberBetween(1, 5));
+                    getPCG get = new getPCG();
 
                     QuestLog = "Ability 2: (Obtain training materials) \n" + "To improve your skills, you will need to get some <item:materials> to practice with.";
                     return get.returnMsg() + "\n" + "You use the materials \n";
@@ -42,12 +37,12 @@ namespace PCG
                     return "Practice skill \n";
 
                 case 6:
-                    getPCG get2 = new getPCG(RandomNumberGenerator.NumberBetween(1, 5));
+                    getPCG get2 = new getPCG();
                     QuestLog = "Ability 6: (Research a skill(1)) \n" + "To learn a new skill you must research it. Go get something, and use it to acquire its skill.";
                     return get2.returnMsg() + "\n" + "Use the skill \n";
 
                 case 7:
-                    getPCG get3 = new getPCG(RandomNumberGenerator.NumberBetween(1, 5));
+                    getPCG get3 = new getPCG();
                     QuestLog = "Ability 7: (Research a skill(2)) \n" + "To learn a new skill you must research it. Go get something, and experiment with it, until you figure out it purpose.";
                     return get3.returnMsg() + "\n" + "Experiment with the skill \n";
 

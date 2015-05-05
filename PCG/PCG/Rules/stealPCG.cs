@@ -8,12 +8,7 @@ namespace PCG
 {
     public class stealPCG
     {
-        private int CallOfSteal { get; set; }
-
-        public stealPCG(int callOfSteal)
-        {
-            CallOfSteal = callOfSteal;
-        }
+        private int CallOfSteal = RandomNumberGenerator.NumberBetween(1, 3);
 
         public string returnMsg()
         {
@@ -24,7 +19,7 @@ namespace PCG
                 //"stealth"
                 //"take"
 
-                gotoPCG GOTO = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
+                gotoPCG GOTO = new gotoPCG();
                 return "Steal 1: Go someplace, sneak up on somebody, and take something \n" + GOTO.returnMsg();
 
             case 2:
@@ -32,8 +27,8 @@ namespace PCG
                 //kill
                 //"take"
 
-                gotoPCG GOTO2 = new gotoPCG(RandomNumberGenerator.NumberBetween(1, 4));
-                killPCG Kill = new killPCG(1);
+                gotoPCG GOTO2 = new gotoPCG();
+                killPCG Kill = new killPCG();
                 return "Steal 2: Go someplace, kill somebody and take something \n" + GOTO2.returnMsg() + "\n" + Kill.returnMsg();
 
             default:
