@@ -30,13 +30,20 @@ namespace PCG
             comboBox2.Items.Add("Wealth");
             comboBox2.Items.Add("Ability");
             comboBox2.Items.Add("Equipment");
+
+			//-------------------------------------
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            rtb1.Text = "";
-            rtbQuest.Text = "";
-            Quests(RandomNumberGenerator.NumberBetween(1,10));
+			rtbQuest.Text = "";
+			rtb1.Text = "";
+
+			Rule start = new StealRule (World.NPCbyID (1), World.RandomItem());
+
+			foreach (var line in Rule.getText(start)) {
+				rtb1.Text += line + "\n";
+			}
         }
 
         public void Quests(int QuestInputNumber){
